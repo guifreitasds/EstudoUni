@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 public class main{
@@ -20,7 +21,9 @@ public class main{
                     inserir(notas, qtd);
                     break;
                 case 2:
-                    System.out.println(notas);
+                    for(int i=0;i<notas.length;i++){
+                        System.out.println("O valor na posição " + i + " é igual a " + notas[i]);
+                    }
                     break;
                 case 3:
                     break;
@@ -35,19 +38,17 @@ public class main{
 
     }
 
-    public static int inserir(int vet[], int qtd) {
+    public static void inserir(int vet[], int qtd) {
         Scanner read = new Scanner(System.in);
+        System.out.println("Digite o valor: ");
         int valor = read.nextInt();
-        if(vet.length==0){
-        vet[0]=valor;
-        }
         for(int i=0;i<vet.length;i++){
-            if (vet[i]<valor) {
-                i++;
-            } else {
-                vet[i] = valor;
+            if(vet[i]==0){
+                vet[i]=valor;
+                break;
+            } else{
+                System.out.println("Lista Cheia!");
             }
         }
-        return valor;
     }
 }
