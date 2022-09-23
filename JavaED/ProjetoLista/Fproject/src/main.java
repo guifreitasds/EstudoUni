@@ -21,11 +21,15 @@ public class main{
                     inserir(notas, qtd);
                     break;
                 case 2:
-                    for(int i=0;i<notas.length;i++){
-                        System.out.println("O valor na posição " + i + " é igual a " + notas[i]);
-                    }
+                    listar(notas);
                     break;
                 case 3:
+                    int v = pesquisar(notas);
+                    if(v==-1){
+                        System.out.println("Valor não encontrado!");
+                    } else{
+                        System.out.println("Valor encontrado na posição " + v);
+                    }
                     break;
                 case 4:
                     break;
@@ -46,9 +50,29 @@ public class main{
             if(vet[i]==0){
                 vet[i]=valor;
                 break;
-            } else{
-                System.out.println("Lista Cheia!");
+            } else if(i==vet.length-1 && vet[i]!=0){
+                    System.out.println("Lista Cheia");
             }
         }
+    }
+    public static void listar(int vet[]) {
+        System.out.println("Valores da Lista");
+        System.out.println("-------------------------------");
+        for(int i=0;i<vet.length;i++){
+            System.out.println("O valor na posição " + i + " é igual a " + vet[i]);
+        }
+        System.out.println("-------------------------------");
+    }
+    public static int pesquisar(int vet[]) {
+        Scanner read = new Scanner(System.in);
+        System.out.println("Digite o valor a ser pesquisado: ");
+        int valor = read.nextInt();
+        for(int i=0;i<vet.length;i++){
+            if(vet[i]==valor){
+               return i;
+            }
+        }
+        return -1;
+        
     }
 }
