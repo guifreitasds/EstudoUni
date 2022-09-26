@@ -32,8 +32,8 @@ public class main{
                     }
                     break;
                 case 4:
+                    excluir(notas);
                     break;
-                
                 default:
                     System.out.println("Opção inválida!");
                     break;
@@ -42,6 +42,8 @@ public class main{
 
     }
 
+
+    
     public static void inserir(int vet[], int qtd) {
         Scanner read = new Scanner(System.in);
         System.out.println("Digite o valor: ");
@@ -55,6 +57,8 @@ public class main{
             }
         }
     }
+
+
     public static void listar(int vet[]) {
         System.out.println("Valores da Lista");
         System.out.println("-------------------------------");
@@ -63,6 +67,8 @@ public class main{
         }
         System.out.println("-------------------------------");
     }
+
+
     public static int pesquisar(int vet[]) {
         Scanner read = new Scanner(System.in);
         System.out.println("Digite o valor a ser pesquisado: ");
@@ -74,5 +80,26 @@ public class main{
         }
         return -1;
         
+    }
+
+    public static void excluir(int vet[]){
+        Scanner read = new Scanner(System.in);
+        System.out.println("Digite o valor a ser excluido: ");
+        int valor = read.nextInt();
+        int pos = 0;
+        for(int i=0;i<vet.length;i++){
+            if(vet[i]==valor){
+                System.out.println("Valor encontrado!");
+                pos = i;
+            }
+        
+        }
+        for(int a=pos;a<vet.length;a++){
+            if(a==vet.length-1){
+                vet[a]=0;
+                System.out.println("a");
+            }
+            vet[a]=vet[a+1];
+       }
     }
 }
