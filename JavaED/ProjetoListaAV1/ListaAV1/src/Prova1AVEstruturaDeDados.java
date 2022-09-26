@@ -59,22 +59,34 @@ public class Prova1AVEstruturaDeDados {
     }
 
     private static void ordenarPorTroca(int vetAux[]) {
+        int qtd = 0;
         int tro = 0; //Variável para contar a quantidade de Trocas desse método
         int com = 0; //Variável para contar a quantidade de Comparações desse método
         System.out.println("### Ordenação por Troca ###");
         int maior = 0;
         int posmaior = 0;
-        for(int i=0;i<vetAux.length-1;i++){ // Varredura para ordenação do maior número
-            if(vetAux[i]>maior){
-                maior = vetAux[i];
-                tro++;
-                posmaior = i;
+        for(int b=0;b<=vetAux.length-qtd-1;qtd++){
+            maior=0;
+            for(int i=0;i<vetAux.length-qtd-1;i++){ // Varredura para ordenação do maior número
+                if(vetAux[i]>maior){
+                    maior = vetAux[i];
+                    posmaior = i;
+                }
+            }
+            for(int a=posmaior;a<=vetAux.length-qtd-1;a++){
+                if(a==vetAux.length-qtd-1){
+                    vetAux[a] = maior;
+                    tro++;
+                    break;
+                } else{
+                    vetAux[a] = vetAux[a+1];
+                    tro++;
+                }
             }
         }
-        vetAux[vetAux.length-1] = maior;
-        for(int a=posmaior;a<vetAux.length-2;a++){
-            vetAux[a] = vetAux[a+1];
-        }
+        
+        
+
         listarComplexiade(tro,com);
         listarVetorOrdenado(vetAux);
     }
