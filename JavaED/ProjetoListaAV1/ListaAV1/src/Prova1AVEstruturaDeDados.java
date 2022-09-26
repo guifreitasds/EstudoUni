@@ -15,17 +15,17 @@ public class Prova1AVEstruturaDeDados {
         int vet[] = new int[20];
         int vetAux[] = new int[vet.length];
         Random aleatorio = new Random();
-        for(int i=0; i<vet.length;i++){
+        for(int i=0; i<vet.length;i++){ // Loop para formação aleatória do vetor
             vet[i] = aleatorio.nextInt(1000);
         }
         System.out.println("### Lista Desordenada ###");
         for(int val:vet){
-            System.out.print(val+"-");
+            System.out.print(val+"-"); // Print para estilização da ordenação inicial dos números
         }
         System.out.println("");
         Scanner leia = new Scanner(System.in);
         int opc = 0;
-        while (opc != 4){
+        while (opc != 4){ // Loop de Menu para o usuário
             System.out.println("");
             System.out.println("# Vamos Ordenar? #");
             System.out.println("1 - Por Troca");
@@ -64,7 +64,7 @@ public class Prova1AVEstruturaDeDados {
         System.out.println("### Ordenação por Troca ###");
         int maior = 0;
         int posmaior = 0;
-        for(int i=0;i<vetAux.length-1;i++){
+        for(int i=0;i<vetAux.length-1;i++){ // Varredura para ordenação do maior número
             if(vetAux[i]>maior){
                 maior = vetAux[i];
                 tro++;
