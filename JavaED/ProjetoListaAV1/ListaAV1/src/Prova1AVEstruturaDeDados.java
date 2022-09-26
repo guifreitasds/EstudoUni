@@ -67,7 +67,7 @@ public class Prova1AVEstruturaDeDados {
         int posmaior = 0;
         for(int b=0;b<=vetAux.length-qtd-1;qtd++){
             maior=0;
-            for(int i=0;i<vetAux.length-qtd-1;i++){ // Varredura para ordenação do maior número
+            for(int i=0;i<vetAux.length-qtd;i++){ // Varredura para ordenação do maior número
                 if(vetAux[i]>maior){
                     maior = vetAux[i];
                     posmaior = i;
@@ -84,9 +84,6 @@ public class Prova1AVEstruturaDeDados {
                 }
             }
         }
-        
-        
-
         listarComplexiade(tro,com);
         listarVetorOrdenado(vetAux);
     }
