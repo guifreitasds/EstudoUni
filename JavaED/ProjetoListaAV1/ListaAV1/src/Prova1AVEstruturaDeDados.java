@@ -59,19 +59,31 @@ public class Prova1AVEstruturaDeDados {
     }
 
     private static void ordenarPorTroca(int vetAux[]) {
-        int qtd = 0;
+
         int tro = 0; //Variável para contar a quantidade de Trocas desse método
         int com = 0; //Variável para contar a quantidade de Comparações desse método
         System.out.println("### Ordenação por Troca ###");
+        listarComplexiade(tro,com);
+        listarVetorOrdenado(vetAux);
+    }
+
+    private static void ordenarPorSelecao(int vetAux[]) {
+        int qtd = 0;
+        int tro = 0; //Variável para contar a quantidade de Trocas desse método
+        int com = 0; //Variável para contar a quantidade de Comparações desse método
         int maior = 0;
         int posmaior = 0;
+        System.out.println("### Ordenação por Seleção ###");
+        //criar aqui a lógica da Ordenação por Seleção
         for(int b=0;b<=vetAux.length-qtd-1;qtd++){
             maior=0;
             for(int i=0;i<vetAux.length-qtd;i++){ // Varredura para ordenação do maior número
                 if(vetAux[i]>maior){
                     maior = vetAux[i];
                     posmaior = i;
+                    
                 }
+            com++;
             }
             for(int a=posmaior;a<=vetAux.length-qtd-1;a++){
                 if(a==vetAux.length-qtd-1){
@@ -84,15 +96,6 @@ public class Prova1AVEstruturaDeDados {
                 }
             }
         }
-        listarComplexiade(tro,com);
-        listarVetorOrdenado(vetAux);
-    }
-
-    private static void ordenarPorSelecao(int vetAux[]) {
-        int tro = 0; //Variável para contar a quantidade de Trocas desse método
-        int com = 0; //Variável para contar a quantidade de Comparações desse método
-        System.out.println("### Ordenação por Seleção ###");
-        //criar aqui a lógica da Ordenação por Seleção
         listarComplexiade(tro,com);
         listarVetorOrdenado(vetAux);
     }
