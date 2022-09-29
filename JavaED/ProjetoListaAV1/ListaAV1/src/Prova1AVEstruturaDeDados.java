@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Prova1AVEstruturaDeDados {
     public static void main(String[] args) {
-        int vet[] = new int[20];
+        int vet[] = new int[10];
         int vetAux[] = new int[vet.length];
         Random aleatorio = new Random();
         for(int i=0; i<vet.length;i++){ // Loop para formação aleatória do vetor
@@ -29,7 +29,7 @@ public class Prova1AVEstruturaDeDados {
             System.out.println("");
             System.out.println("# Vamos Ordenar? #");
             System.out.println("1 - Por Troca");
-            System.out.println("2 - Por Selação");
+            System.out.println("2 - Por Seleção");
             System.out.println("3 - Por Inserção");
             System.out.println("4 - Sair");
             System.out.println("");
@@ -62,7 +62,29 @@ public class Prova1AVEstruturaDeDados {
 
         int tro = 0; //Variável para contar a quantidade de Trocas desse método
         int com = 0; //Variável para contar a quantidade de Comparações desse método
+        boolean trocou = true; // Variável para provar que houve troca em certo loop, caso seja false, bloqueia o while loop
         System.out.println("### Ordenação por Troca ###");
+        while(trocou){
+        int troca = 0; // Variável para checagem de troca no loop atual, emm caso de 0 o for loop inteiro, faz com que a var 'trocou' torne-se false
+            for(int i=0;i<vetAux.length-1;i++){
+                int par=0; 
+                com++;
+                if(vetAux[i]>vetAux[i+1]){
+                    par=vetAux[i+1];
+                    vetAux[i+1]=vetAux[i];
+                    vetAux[i]=par;
+                    tro++;
+                    troca++;
+                } else{
+                    troca+=0;
+                }
+            }
+            if(troca>0){
+                trocou=true;
+            } else{
+                trocou=false;
+            }
+        }
         listarComplexiade(tro,com);
         listarVetorOrdenado(vetAux);
     }
