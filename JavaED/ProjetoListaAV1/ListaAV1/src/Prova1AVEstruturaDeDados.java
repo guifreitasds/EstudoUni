@@ -70,13 +70,11 @@ public class Prova1AVEstruturaDeDados {
                 int par=0; 
                 com++;
                 if(vetAux[i]>vetAux[i+1]){
-                    par=vetAux[i+1];
-                    vetAux[i+1]=vetAux[i];
-                    vetAux[i]=par;
-                    tro++;
+                    par=vetAux[i+1]; // Armazenamento do par do número escolhido em uma variável
+                    vetAux[i+1]=vetAux[i]; // Passagem do número escolhido para o par (que está na variavel)
+                    vetAux[i]=par; // Passagem do número armazenado na variável para o lugar que estava o número escolhido
+                    tro++; 
                     troca++;
-                } else{
-                    troca+=0;
                 }
             }
             if(troca>0){
@@ -103,7 +101,6 @@ public class Prova1AVEstruturaDeDados {
                 if(vetAux[i]>maior){
                     maior = vetAux[i];
                     posmaior = i;
-                    
                 }
             com++;
             }
