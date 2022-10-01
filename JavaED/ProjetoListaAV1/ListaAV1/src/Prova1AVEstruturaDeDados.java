@@ -98,19 +98,19 @@ public class Prova1AVEstruturaDeDados {
         for(int b=0;b<=vetAux.length-qtd-1;qtd++){
             maior=0;
             for(int i=0;i<vetAux.length-qtd;i++){ // Varredura para ordenação do maior número
-                if(vetAux[i]>maior){
-                    maior = vetAux[i];
-                    posmaior = i;
+                if(vetAux[i]>maior){ // Comparação para armazenar o maior valor na variável "maior"
+                    maior = vetAux[i]; // Armazenamento do maior valor na sua variável
+                    posmaior = i; // Armazenamento da posição do maior valor, para uso posterior
                 }
             com++;
             }
-            for(int a=posmaior;a<=vetAux.length-qtd-1;a++){
-                if(a==vetAux.length-qtd-1){
+            for(int a=posmaior;a<=vetAux.length-qtd-1;a++){ // Varredura para Ordenação dos números, sempre retirando o maior número.
+                if(a==vetAux.length-qtd-1){ // Comparação da variável de controle, caso seja a última, o valor último será o maior
                     vetAux[a] = maior;
                     tro++;
                     break;
                 } else{
-                    vetAux[a] = vetAux[a+1];
+                    vetAux[a] = vetAux[a+1]; // Caso não, o vetor so é ordenado normalmente, passando os números da direita para a esquerda
                     tro++;
                 }
             }
