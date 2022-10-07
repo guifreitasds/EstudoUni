@@ -6,17 +6,21 @@
 }
 
 body{
-    background-color: #f8d9d5;
+    background-color: #fff2eb;
 }
 
 header{
+    position: relative;
     text-align: center;
-    background-color: #f18b7f;
+    background-color: #ffc9ab;
     height: 138px;
 }
 
-header h1{
-    color: purple;
+header > div{
+}
+
+header > div > h1{
+    color: #741b47;
     font-weight: 500;
     font-size: 3em;
 }
@@ -27,14 +31,13 @@ header img, h1{
 
 header img{
     width: 100px;
-    height: 70px;
     margin-top: 20px;
 }
 
 header > nav{
     text-align: left;
     margin-left: 100px;
-    background-color:purple;
+    background-color:#741b47;
     width: 271px;
     padding: 10px;
 
@@ -50,7 +53,7 @@ header > nav > a{
 
 header > nav > a:hover{
     background-color: white;
-    color: purple;
+    color: #741b47;
     transition-duration: 0.5s;
 }
 

@@ -77,6 +77,7 @@ public class Prova1AVEstruturaDeDados {
                     troca++;
                 }
             }
+            com++;
             if(troca>0){
                 trocou=true;
             } else{
@@ -98,13 +99,15 @@ public class Prova1AVEstruturaDeDados {
         for(int b=0;b<=vetAux.length-qtd-1;qtd++){
             maior=0;
             for(int i=0;i<vetAux.length-qtd;i++){ // Varredura para ordenação do maior número
+                com++;
                 if(vetAux[i]>maior){ // Comparação para armazenar o maior valor na variável "maior"
                     maior = vetAux[i]; // Armazenamento do maior valor na sua variável
                     posmaior = i; // Armazenamento da posição do maior valor, para uso posterior
                 }
-            com++;
+            
             }
             for(int a=posmaior;a<=vetAux.length-qtd-1;a++){ // Varredura para Ordenação dos números, sempre retirando o maior número.
+                com++;
                 if(a==vetAux.length-qtd-1){ // Comparação da variável de controle, caso seja a última, o valor último será o maior
                     vetAux[a] = maior;
                     tro++;
@@ -123,7 +126,25 @@ public class Prova1AVEstruturaDeDados {
         int tro = 0; //Variável para contar a quantidade de Trocas desse método
         int com = 0; //Variável para contar a quantidade de Comparações desse método
         System.out.println("### Ordenação por Inserção ###");
-        //criar aqui a lógica da Ordenação por Inserção
+        for(int i=0;i<vetAux.length;i++){
+            if(i==0 || vetAux[i]>vetAux[i-1]){
+                i+=0;
+            } else{
+                int esc = vetAux[i];
+                int a = i;
+                while(a>-1){
+                    int esc2 = 0;
+                    com++;
+                    if (vetAux[a]>esc) {
+                        esc2=vetAux[a];
+                        vetAux[a]=vetAux[a+1];
+                        vetAux[a+1]=esc2;
+                        tro++;
+                    } 
+                    a--;
+                }
+            }
+        }
         listarComplexiade(tro,com);
         listarVetorOrdenado(vetAux);
     }
