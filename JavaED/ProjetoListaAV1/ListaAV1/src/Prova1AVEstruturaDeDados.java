@@ -125,15 +125,15 @@ public class Prova1AVEstruturaDeDados {
             int tro = 0; //Variável para contar a quantidade de Trocas desse método
             int com = 0; //Variável para contar a quantidade de Comparações desse método
             System.out.println("### Ordenação por Inserção ###");
-            for(int i=1;i<vetAux.length;i++){ // 
+            for(int i=1;i<vetAux.length;i++){ // Loop de varredura do vetor por completo, iniciando pela 2a posição
                 int esc = vetAux[i];
-                for(int a = i;a>-1;a--){
-                    int esc2 = 0;
+                for(int a = i;a>-1;a--){ // Loop de varredura do vetor desde o número escolhido ao primeiro número
+                    int esc2 = 0; // Variável de controle para armazenamento do "invisible number"
                     com++;
-                    if (vetAux[a]>esc) {
-                        esc2=vetAux[a];
-                        vetAux[a]=vetAux[a+1];
-                        vetAux[a+1]=esc2;
+                    if (vetAux[a]>esc) { // Checagem do número escolhido (menor) com a posição do vetor escolhido na varredura invertida
+                        esc2=vetAux[a]; // Passagem do "invisible number" para a variável de controle
+                        vetAux[a]=vetAux[a+1]; // Passagem do vetor escolhido +1 para a posição que estava o "invisible number"
+                        vetAux[a+1]=esc2; // Passagem do "invisible number" para seu lugar ordenado
                         tro++;
                     } 
                 }
