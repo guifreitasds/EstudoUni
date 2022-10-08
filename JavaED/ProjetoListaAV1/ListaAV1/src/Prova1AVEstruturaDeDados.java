@@ -147,13 +147,13 @@ public class Prova1AVEstruturaDeDados {
     private static void listarVetorOrdenado(int vetAux[]) {
         System.out.println("### Lista Ordenada ###");
         for(int val:vetAux){
-            System.out.print(val+"-");
+            System.out.print(val+" - "); 
         }
         System.out.println("");
     }
 
     private static void listarComplexidade(int tro, int com) {
-        System.out.println("### Complexidade ###");
+        System.out.println("### Complexidade ###"); // 91, 36 sel // 60, 15 tro // 54, 15 ins
         System.out.println("Comparações: "+com);
         System.out.println("Trocas: "+tro);
     }
