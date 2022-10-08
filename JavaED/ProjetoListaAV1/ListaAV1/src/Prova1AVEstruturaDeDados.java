@@ -78,9 +78,9 @@ public class Prova1AVEstruturaDeDados {
                 }
             }
             com++;
-            if(troca>0){
+            if(troca>0){  // Comparação para saber se houve alguma troca no loop
                 trocou=true;
-            } else{
+            } else{ // Caso não, a variável é false e o loop é finalizado, pois o vetor está totalmente ordenado
                 trocou=false;
             }
         }
@@ -104,7 +104,6 @@ public class Prova1AVEstruturaDeDados {
                     maior = vetAux[i]; // Armazenamento do maior valor na sua variável
                     posmaior = i; // Armazenamento da posição do maior valor, para uso posterior
                 }
-            
             }
             for(int a=posmaior;a<=vetAux.length-qtd-1;a++){ // Varredura para Ordenação dos números, sempre retirando o maior número.
                 com++;
