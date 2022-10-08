@@ -16,7 +16,7 @@ public class Prova1AVEstruturaDeDados {
         int vetAux[] = new int[vet.length];
         Random aleatorio = new Random();
         for(int i=0; i<vet.length;i++){ // Loop para formação aleatória do vetor
-            vet[i] = aleatorio.nextInt(1000);
+            vet[i] = aleatorio.nextInt(10);
         }
         System.out.println("### Lista Desordenada ###");
         for(int val:vet){
@@ -84,7 +84,7 @@ public class Prova1AVEstruturaDeDados {
                 trocou=false;
             }
         }
-        listarComplexiade(tro,com);
+        listarComplexidade(tro,com);
         listarVetorOrdenado(vetAux);
     }
 
@@ -117,21 +117,17 @@ public class Prova1AVEstruturaDeDados {
                 }
             }
         }
-        listarComplexiade(tro,com);
+        listarComplexidade(tro,com);
         listarVetorOrdenado(vetAux);
     }
 
         private static void ordenarPorInsercao(int vetAux[]) {
-        int tro = 0; //Variável para contar a quantidade de Trocas desse método
-        int com = 0; //Variável para contar a quantidade de Comparações desse método
-        System.out.println("### Ordenação por Inserção ###");
-        for(int i=0;i<vetAux.length;i++){
-            if(i==0 || vetAux[i]>vetAux[i-1]){
-                i+=0;
-            } else{
+            int tro = 0; //Variável para contar a quantidade de Trocas desse método
+            int com = 0; //Variável para contar a quantidade de Comparações desse método
+            System.out.println("### Ordenação por Inserção ###");
+            for(int i=1;i<vetAux.length;i++){ // 
                 int esc = vetAux[i];
-                int a = i;
-                while(a>-1){
+                for(int a = i;a>-1;a--){
                     int esc2 = 0;
                     com++;
                     if (vetAux[a]>esc) {
@@ -140,13 +136,13 @@ public class Prova1AVEstruturaDeDados {
                         vetAux[a+1]=esc2;
                         tro++;
                     } 
-                    a--;
                 }
             }
+            listarComplexidade(tro,com);
+            listarVetorOrdenado(vetAux);
         }
-        listarComplexiade(tro,com);
-        listarVetorOrdenado(vetAux);
-    }
+            
+
 
     private static void listarVetorOrdenado(int vetAux[]) {
         System.out.println("### Lista Ordenada ###");
@@ -156,7 +152,7 @@ public class Prova1AVEstruturaDeDados {
         System.out.println("");
     }
 
-    private static void listarComplexiade(int tro, int com) {
+    private static void listarComplexidade(int tro, int com) {
         System.out.println("### Complexidade ###");
         System.out.println("Comparações: "+com);
         System.out.println("Trocas: "+tro);
