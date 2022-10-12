@@ -130,13 +130,11 @@ public class Prova1AVEstruturaDeDados {
                 for(int a = i-1;a>-1;a--){ // Loop de varredura do vetor desde o número escolhido ao primeiro número
                     int esc2 = 0; // Variável de controle para armazenamento do "invisible number"
                     com++;
-                    listarVetorOrdenado(vetAux);
                     if (vetAux[a]>esc) { // Checagem do número escolhido (menor) com a posição do vetor escolhido na varredura invertida
                         esc2=vetAux[a]; // Passagem do "invisible number" para a variável de controle
                         vetAux[a]=vetAux[a+1]; // Passagem do vetor escolhido +1 para a posição que estava o "invisible number"
                         vetAux[a+1]=esc2; // Passagem do "invisible number" para seu lugar ordenado
                         tro++;
-                        listarVetorOrdenado(vetAux);
                     } else{
                         break;
                     }
