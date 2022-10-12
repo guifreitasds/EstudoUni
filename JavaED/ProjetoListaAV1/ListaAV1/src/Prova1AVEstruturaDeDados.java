@@ -3,8 +3,8 @@ import java.util.Scanner;
 /**
  * O Projeto foi realizado pela equipe:
  * 1 - Guilherme Freitas dos Santos - 01564838
- * 2 - Matrícula e Nome do Aluno 02
- * 3 - Matrícula e Nome do Aluno 03
+ * 2 - Yasmin Letícia de Oliveira França - 01552572
+ * 3 - Nicolas Rafael Silva Lucena - 01565072
  * 
  * Turma: (2MA, 2MB, 2MC, 2MD, 2NA, 2NB ou 2NC)
  * Disciplina: Estrutura de Dados
@@ -12,11 +12,11 @@ import java.util.Scanner;
  */
 public class Prova1AVEstruturaDeDados {
     public static void main(String[] args) {
-        int vet[] = new int[10];
+        int vet[] = new int[20];
         int vetAux[] = new int[vet.length];
         Random aleatorio = new Random();
         for(int i=0; i<vet.length;i++){ // Loop para formação aleatória do vetor
-            vet[i] = aleatorio.nextInt(10);
+            vet[i] = aleatorio.nextInt(1000);
         }
         System.out.println("### Lista Desordenada ###");
         for(int val:vet){
@@ -153,7 +153,7 @@ public class Prova1AVEstruturaDeDados {
     }
 
     private static void listarComplexidade(int tro, int com) {
-        System.out.println("### Complexidade ###"); // 91, 36 sel // 60, 15 tro // 54, 15 ins
+        System.out.println("### Complexidade ###");
         System.out.println("Comparações: "+com);
         System.out.println("Trocas: "+tro);
     }
