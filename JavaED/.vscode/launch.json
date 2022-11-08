@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PilhaFila",
+            "request": "launch",
+            "mainClass": "PilhaFila",
+            "projectName": "JavaED_35ec8448"
+        },
+        {
+            "type": "java",
             "name": "Launch Prova1AVEstruturaDeDados",
             "request": "launch",
             "mainClass": "Prova1AVEstruturaDeDados",

@@ -4,6 +4,7 @@ public class PilhaFila {
         Scanner ler = new Scanner(System.in);
         String vPilha[] = new String[5];
         String vFila[] = new String[5];
+        int controlvPilha = 0;
         int opc = 0;
         while (opc != 5){
             System.out.println("#### PILHA ####");
@@ -22,9 +23,12 @@ public class PilhaFila {
             switch (opc) {
                 case 1:
                     //EMPILHAR
+                    Empilhar(vPilha, controlvPilha);
+                    controlvPilha++;
                     break;
                 case 2:
-                    //DESEMPILHAR
+                    // DESEMPILHAR
+                    Desempilhar(vPilha, controlvPilha);
                     break;
                 case 3:
                     //LISTAR PILHA
@@ -47,5 +51,27 @@ public class PilhaFila {
             } 
         }
     }
-    
+
+    private static void Empilhar(String pilha[], int control) {
+        Scanner ler = new Scanner(System.in);
+        System.out.print("Digite um número para empilhar: ");
+        String esc = ler.next();
+        if(control==5){
+            System.err.println("ERRO, pilha cheia");
+            return;
+        }
+        else if (pilha[control]==null){
+            pilha[control] = esc;
+            control++;
+        }
+        for (String string : pilha) {
+            System.out.println(string);
+        }
+    }
+
+    private static void Desempilhar(String pilha[], int control) {
+        pilha[control-1] = null;
+    }
 }
+
+
