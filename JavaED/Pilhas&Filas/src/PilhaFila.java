@@ -2,10 +2,10 @@ import java.util.Scanner;
 public class PilhaFila {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
-        String vPilha[] = new String[5];
         String vFila[] = new String[5];
-        int controlvPilha = 0;
         int opc = 0;
+
+        Pilha pilha = new Pilha();
         while (opc != 5){
             System.out.println("#### PILHA ####");
             System.out.println("1 - Empilhar");
@@ -23,15 +23,24 @@ public class PilhaFila {
             switch (opc) {
                 case 1:
                     //EMPILHAR
-                    Empilhar(vPilha, controlvPilha);
-                    controlvPilha++;
+                    for(int i=0;i<pilha.pilha.length;i++){
+                        System.out.print("Digite um número para empilhar: ");
+                        String esc = ler.next();
+                        pilha.Empilhar(esc);
+                        System.out.println("Deseja inserir mais um valor? [1-SIM/2-NÃO]");
+                        int continuar = ler.nextInt();
+                        if (continuar==2){
+                            break;
+                        }
+                    }
                     break;
                 case 2:
                     // DESEMPILHAR
-                    Desempilhar(vPilha, controlvPilha);
+                    pilha.Desempilhar(pilha.pilha);
                     break;
                 case 3:
                     //LISTAR PILHA
+                    pilha.ListarPilha(pilha.pilha);
                     break;
                 case 4:
                     //INCLUIR FILA
@@ -52,26 +61,9 @@ public class PilhaFila {
         }
     }
 
-    private static void Empilhar(String pilha[], int control) {
-        Scanner ler = new Scanner(System.in);
-        System.out.print("Digite um número para empilhar: ");
-        String esc = ler.next();
-        if(control==5){
-            System.err.println("ERRO, pilha cheia");
-            return;
-        }
-        else if (pilha[control]==null){
-            pilha[control] = esc;
-            control++;
-        }
-        for (String string : pilha) {
-            System.out.println(string);
-        }
-    }
-
-    private static void Desempilhar(String pilha[], int control) {
-        pilha[control-1] = null;
-    }
 }
+
+
+
 
 
