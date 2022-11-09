@@ -77,6 +77,7 @@ public class PilhaFila {
                     break;
             } 
         }
+        ler.close();
     }
 
 }

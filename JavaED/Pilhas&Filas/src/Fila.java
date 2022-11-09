@@ -17,7 +17,11 @@ public class Fila {
 
     public void ExcluirFila(){
         elementos[start] = null;
-        start++;
+        for(int i=0;i<elementos.length-1;i++){
+            elementos[i]=elementos[i+1];
+            elementos[i+1] = null;
+        }
+        top--;
     }
 
     public void ListarFila(String fila[]){
