@@ -18,6 +18,7 @@ public class Pilha {
 
     public void Desempilhar(String pilha[]) {
         pilha[top] = null;
+        top--;
     }
 
     public void ListarPilha(String pilha[]){
