@@ -31,13 +31,10 @@ public class PilhaFilaMain {
                 case 1:
                     //EMPILHAR
                     for(int i=pilha.top;i<=pilha.pilha.length-2;i++){
-                        if(pilha.top==5){
-                            break;
-                        }
                         System.out.print("Digite um valor para empilhar: ");
                         String esc = ler.next(); // Pedindo valor para o usuário
                         pilha.Empilhar(esc); // Utilização do metodo para inserir o valor
-                        System.out.println("Deseja inserir mais um valor? [1-SIM/2-NÃO]");
+                        System.out.print("Deseja inserir mais um valor? [1-SIM/2-NÃO]");
                         int continuar = ler.nextInt(); // Solicitação de resposta de continuação do usuário
                         if (continuar==2){
                             break;
@@ -55,14 +52,10 @@ public class PilhaFilaMain {
                 case 4:
                     //INCLUIR FILA
                     for(int i=fila.top;i<=fila.elementos.length-2;i++){
-                        if(pilha.top==5){
-                            break;
-                        }
                         System.out.print("Digite um valor para incluir na fila: ");
                         String esc = ler.next(); // Pedindo valor para o usuário
                         fila.IncluirFila(esc); // Utilização do metodo para inserir o valor
-                        System.out.println("Deseja inserir mais um valor? [1-SIM/2-NÃO]"); 
-                        System.out.println(i);
+                        System.out.print("Deseja inserir mais um valor? [1-SIM/2-NÃO]"); 
                         int continuar = ler.nextInt(); // Solicitação de resposta de continuação do usuário
                         if (continuar==2){
                             break;

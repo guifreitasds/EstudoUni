@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PilhaFilaMain",
+            "request": "launch",
+            "mainClass": "PilhaFilaMain",
+            "projectName": "JavaED_35ec8448"
+        },
+        {
+            "type": "java",
             "name": "Launch PilhaFila",
             "request": "launch",
             "mainClass": "PilhaFila",
