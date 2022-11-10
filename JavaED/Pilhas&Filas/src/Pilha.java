@@ -18,9 +18,13 @@ public class Pilha {
     }
 
     public void Desempilhar(String pilha[]) {
-        System.out.println("Excluindo última posição de valor: " + this.pilha[top]);
-        this.pilha[top] = null; // Excluindo o último valor da pilha
-        this.top--; // Retirando 1 do topo, pois o último valor foi retirado
+        if(top==-1){
+            System.err.println("ERRO, PILHA VAZIA!");
+        }else{
+            System.out.println("Excluindo última posição de valor: " + this.pilha[top]);
+            this.pilha[top] = null; // Excluindo o último valor da pilha
+            this.top--; // Retirando 1 do topo, pois o último valor foi retirado
+        }
     }
 
     public void ListarPilha(String pilha[]){
