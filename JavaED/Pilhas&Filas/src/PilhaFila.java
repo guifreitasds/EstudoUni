@@ -23,7 +23,7 @@ public class PilhaFila {
             switch (opc) {
                 case 1:
                     //EMPILHAR
-                    for(int i=0;i<=pilha.pilha.length-1;i++){
+                    for(int i=pilha.top;i<=pilha.pilha.length-2;i++){
                         if(pilha.top==5){
                             break;
                         }
@@ -47,15 +47,16 @@ public class PilhaFila {
                     break;
                 case 4:
                     //INCLUIR FILA
-                    for(int i=0;i<=fila.elementos.length-1;i++){
+                    for(int i=fila.top;i<=fila.elementos.length-2;i++){
                         if(pilha.top==5){
                             break;
                         }
                         System.out.print("Digite um valor para incluir na fila: ");
-                        String esc = ler.next();
-                        fila.IncluirFila(esc);
-                        System.out.println("Deseja inserir mais um valor? [1-SIM/2-NÃO]");
-                        int continuar = ler.nextInt();
+                        String esc = ler.next(); // Pedindo valor para o usuário
+                        fila.IncluirFila(esc); // Utilização do metodo para inserir o valor
+                        System.out.println("Deseja inserir mais um valor? [1-SIM/2-NÃO]"); 
+                        System.out.println(i);
+                        int continuar = ler.nextInt(); // Solicitação de resposta de continuação do usuário
                         if (continuar==2){
                             break;
                         }
