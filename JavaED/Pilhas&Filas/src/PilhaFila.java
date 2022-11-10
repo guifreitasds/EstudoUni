@@ -4,8 +4,9 @@ public class PilhaFila {
         Scanner ler = new Scanner(System.in);
         int opc = 0;
 
-        Pilha pilha = new Pilha();
-        Fila fila = new Fila();
+        Pilha pilha = new Pilha(); // Criação do objeto pilha para utilização de seus métodos e atributos
+        Fila fila = new Fila(); // Criação do objeto fila para utilização de seus métodos e atributos
+
         while (opc != 7){
             System.out.println("#### PILHA ####");
             System.out.println("1 - Empilhar");
@@ -27,11 +28,11 @@ public class PilhaFila {
                         if(pilha.top==5){
                             break;
                         }
-                        System.out.print("Digite um número para empilhar: ");
-                        String esc = ler.next();
-                        pilha.Empilhar(esc);
+                        System.out.print("Digite um valor para empilhar: ");
+                        String esc = ler.next(); // Pedindo valor para o usuário
+                        pilha.Empilhar(esc); // Utilização do metodo para inserir o valor
                         System.out.println("Deseja inserir mais um valor? [1-SIM/2-NÃO]");
-                        int continuar = ler.nextInt();
+                        int continuar = ler.nextInt(); // Solicitação de resposta de continuação do usuário
                         if (continuar==2){
                             break;
                         }
