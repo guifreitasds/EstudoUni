@@ -1,5 +1,11 @@
 import java.util.Scanner;
-public class PilhaFila {
+
+// Aluno: Guilherme Freitas dos Santos
+// Matrícula: 01564838
+// Ciências da Computação - 2MD
+
+
+public class PilhaFilaMain {
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
         int opc = 0;
