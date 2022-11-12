@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de IMC</title>
+    <style>
+        *{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form{
+            background-color: #2949be;
+            padding: 20px;
+            width: 30%;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        h1{
+            background-color: #2949be;
+            padding: 10px;
+            color: white;
+        }
+
+        input.fields{
+            display: block;
+            margin: auto;
+
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            border: solid;
+            
+            margin-top: 10px;
+
+            font-weight: bold;
+
+        }
+
+        input.fields::placeholder{
+            color: #2949be81;
+            font-weight: bold;
+        }
+
+        input.buttons{
+            padding: 5px;
+            border: solid;
+            border-color: gray;
+            border-radius: 5px;
+            transition-duration: 100ms;
+        }
+
+        input.buttons:hover{
+            background-color: #2949be;
+            color: white;
+            border-color: white;
+        }
+
+        div{
+            padding: 10px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Vamos descobrir seu IMC!</h1>
+    <form action="">
+        <div>
+            <label for="weight">Peso em Kg</label>
+            <input type="number" name="" id="weight" step="1" placeholder="Digite seu peso" required class="fields">
+        </div>
+        <div>
+            <label for="height">Altura em metros</label>
+            <input type="number" name="" id="height" placeholder="Digite sua altura (1.70)" step="0.1" required class="fields">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campos" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Checar IMC" class="buttons" onclick="checar()">
+        </div>
+        <div id="res">
+            Seu resultado aparecerá aqui!
+        </div>
+    </form>
+    <script>
+        function checar() {
+            var weight = document.getElementById('weight');
+            var height = document.getElementById('height');
+            var resultado =''
+
+            console.log(height.value)
+
+            var res = document.getElementById('res');
+
+            var imc = weight.value/(height.value*height.value);
+
+            console.log(imc)
+
+            if(imc<18.5){
+                resultado = 'Abaixo do peso'
+            }
+            else if(imc>18.5 && imc<24.9){
+                resultado = 'Peso ideal'
+            }
+            else if(imc>24.9 && imc<29.9){
+                resultado = 'Acima do peso'
+            }
+            else if(imc>29.9 && imc<34.9){
+                resultado = 'em Obesidade Grau I'
+            }
+            else if(imc>34.9 && imc<39.9){
+                resultado = 'em Obesidade Grau II'
+            }
+            else if(imc>=40){
+                resultado = 'em Obesidade mórbida'
+            }
+
+            res.innerHTML = `Seu IMC é de ${imc.toFixed(1)} e você está ${resultado}`
+
+
+        }
+    </script>
+</body>
+</html>
