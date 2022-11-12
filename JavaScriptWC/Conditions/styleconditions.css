@@ -86,3 +86,14 @@ form#club > div > input.buttons:hover{
     color: white;
     border-color: white;
 }
+
+
+form#frut, form#frut>h1{
+    background-color: #298934;
+}
+
+form#frut > div > input.buttons:hover{
+    background-color: #298934;
+    color: white;
+    border-color: white;
+}

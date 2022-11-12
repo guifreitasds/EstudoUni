@@ -48,24 +48,38 @@ function comprarComb() {
     var qtd = document.getElementById('qtdgas').value;
     var res = document.getElementById('resbuy');
     if(typegas==1){
-        var total = 3.16*qtd
-        res.innerHTML = `O total da compra é de $${total.toFixed(2)}`
+        var total = 3.16*qtd;
+        res.innerHTML = `O total da compra é de $${total.toFixed(2)}`;
     }
     else if(typegas==2){
-        var total = 4.19*qtd
-        res.innerHTML = `O total da compra é de R$${total.toFixed(2)}`
+        var total = 4.19*qtd;
+        res.innerHTML = `O total da compra é de R$${total.toFixed(2)}`;
     }
 }
 
 function checarIdade() {
     var year = document.getElementById('ageid').value;
     var data = new Date();
-    const actual = data.getFullYear()
-    var res = document.getElementById('resage')
+    const actual = data.getFullYear();
+    var res = document.getElementById('resage');
 
     if(actual-year>=18){
-        res.innerHTML = `Idade ${actual-year}, passagem permitida`
+        res.innerHTML = `Idade ${actual-year}, passagem permitida`;
     } else{
-        res.innerHTML = `Idade ${actual-year}, passagem não permitida`
+        res.innerHTML = `Idade ${actual-year}, passagem não permitida`;
     }
+}
+
+function comprarMor() {
+    var qtd = document.getElementById('strawid').value;
+    var total = 0;
+    var res = document.getElementById('resstraw')
+    if(qtd>5){
+        var total = 2.20*qtd;
+    }else{
+        var total = 2.50*qtd;
+    }
+
+    res.innerHTML = `O resultado da compra de ${qtd}Kg de morangos é de R$${total.toFixed(2)}`
+
 }
