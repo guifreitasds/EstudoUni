@@ -13,6 +13,9 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        html{
+            scroll-behavior: smooth;
+        }
         form{
             background-color: #3f55a7;
             padding: 20px;
@@ -70,6 +73,14 @@
             color: white;
         }
 
+        form#gastation, form#gastation>h1{
+            background-color: #b47604;
+        }
+
+        form#club, form#club>h1{
+            background-color: #742974;
+        }
+
     </style>
 </head>
 <body>
@@ -115,6 +126,46 @@
             </div>
         </form>
     </form>
+
+    <p>Ex 004 e 005</p>
+    <form action="" id="gastation">
+        <h1>Posto de Gasolina</h1>
+        <div>
+            <label for="numbergas">Escolha o combustível</label>
+            <input type="number" id="numbergas" required class="fields" placeholder="1 - Álcool // 2 - Gasolina">
+        </div>
+        <div>
+            <label for="qtdgas">Quantos litros você deseja?</label>
+            <input type="number" id="qtdgas" required class="fields" placeholder="Escolha em L">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campos" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Comprar" class="buttons" onclick="comprarComb()">
+        </div>
+        <div id="resbuy">
+            O total da compra aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 006</p>
+    <form action="" id="club">
+        <h1>Boate Drinks & Tombos</h1>
+        <div>
+            <label for="ageid">Digite seu ano de nascimento</label>
+            <input type="number" id="ageid" required class="fields" placeholder="Ano de Nascimento">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campo" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Checar Idade" class="buttons" onclick="checarIdade()">
+        </div>
+        <div id="resage">
+            O resultado da checagem aparecerá aqui
+        </div>
+    </form>
     <script>
         function checarIMC() {
             var weight = document.getElementById('weight');
@@ -152,12 +203,39 @@
         function checarPI() {
             var n = document.getElementById('numberid').value;
 
-            var res = document.getElementById('reseven')
+            var res = document.getElementById('reseven');
 
             if(n%2==0){
-                res.innerHTML = `N° ${n} par`
+                res.innerHTML = `N° ${n} par`;
             } else{
-                res.innerHTML = `N° ${n} ímpar`
+                res.innerHTML = `N° ${n} ímpar`;
+            }
+        }
+
+        function comprarComb() {
+            var typegas = document.getElementById('numbergas').value;
+            var qtd = document.getElementById('qtdgas').value;
+            var res = document.getElementById('resbuy');
+            if(typegas==1){
+                var total = 3.16*qtd
+                res.innerHTML = `O total da compra é de $${total.toFixed(2)}`
+            }
+            else if(typegas==2){
+                var total = 4.19*qtd
+                res.innerHTML = `O total da compra é de R$${total.toFixed(2)}`
+            }
+        }
+
+        function checarIdade() {
+            var year = document.getElementById('ageid').value;
+            var data = new Date();
+            const actual = data.getFullYear()
+            var res = document.getElementById('resage')
+
+            if(actual-year>=18){
+                res.innerHTML = `Idade ${actual-year}, passagem permitida`
+            } else{
+                res.innerHTML = `Idade ${actual-year}, passagem não permitida`
             }
         }
     </script>
