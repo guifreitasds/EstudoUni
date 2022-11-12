@@ -97,3 +97,13 @@ form#frut > div > input.buttons:hover{
     color: white;
     border-color: white;
 }
+
+form#vac, form#vac>h1{
+    background-color: #a1022f;
+}
+
+form#vac > div > input.buttons:hover{
+    background-color: #a1022f;
+    color: white;
+    border-color: white;
+}

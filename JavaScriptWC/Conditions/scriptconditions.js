@@ -83,3 +83,16 @@ function comprarMor() {
     res.innerHTML = `O resultado da compra de ${qtd}Kg de morangos é de R$${total.toFixed(2)}`
 
 }
+
+function checarVac() {
+    var pac = document.getElementById('childid').value;
+    var age = document.getElementById('agechild').value;
+
+    var res = document.getElementById('resvac');
+
+    if((pac=='C' || pac=='c') && age <=5){
+        res.innerHTML = `Criança de ${age} anos, vacinação permitida`
+    }else{
+        res.innerHTML = `Paciente de ${age} anos, vacinação não permitida`
+    }
+}

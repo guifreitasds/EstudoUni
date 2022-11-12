@@ -105,6 +105,28 @@
             <input type="button" value="Comprar morangos" class="buttons" onclick="comprarMor()">
         </div>
         <div id="resstraw">
+            O total da compra aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 008</p>
+    <form action="" id="vac">
+        <h1>Posto de Vacinação</h1>
+        <div>
+            <label for="childid">Digite C para Criança e A para Adulto</label>
+            <input type="text" id="childid" required class="fields" placeholder="Digite C para Criança">
+        </div>
+        <div>
+            <label for="agechild">Digite a idade do paciente</label>
+            <input type="number" id="agechild" required class="fields" placeholder="Idade em anos">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campos" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Checar Vacinação" class="buttons" onclick="checarVac()">
+        </div>
+        <div id="resvac">
             O resultado da checagem aparecerá aqui
         </div>
     </form>
