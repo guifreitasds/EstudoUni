@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+form{
+    background-color: #3f55a7;
+    padding: 20px;
+    width: 30%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+p{
+    margin-top: 30px;
+}
+h1{
+    background-color: #3f55a7;
+    padding: 10px;
+    color: white;
+}
+
+input.fields{
+    display: block;
+    margin: auto;
+
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border: solid;
+    
+    margin-top: 10px;
+
+    font-weight: bold;
+
+}
+
+input.fields::placeholder{
+    color: #2949be81;
+    font-weight: bold;
+}
+
+input.buttons{
+    padding: 5px;
+    border: solid;
+    border-color: gray;
+    border-radius: 5px;
+    transition-duration: 100ms;
+}
+
+input.buttons:hover{
+    background-color: #2949be;
+    color: white;
+    border-color: white;
+}
+
+div{
+    padding: 10px;
+    color: white;
+}
+
+form#gastation, form#gastation>h1{
+    background-color: #b47604;
+}
+
+form#gastation > div > input.buttons:hover{
+    background-color: #b47604;
+    color: white;
+    border-color: white;
+}
+
+form#club, form#club>h1{
+    background-color: #742974;
+}
+
+form#club > div > input.buttons:hover{
+    background-color: #742974;
+    color: white;
+    border-color: white;
+}
