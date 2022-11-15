@@ -96,3 +96,19 @@ function checarVac() {
         res.innerHTML = `Paciente de ${age} anos, vacinação não permitida`
     }
 }
+
+function checarBuy() {
+    var price = document.getElementById('priceid').value;
+    var qtd = document.getElementById('qtdid').value;
+
+    var res = document.getElementById('resmerc');
+
+    var total = price*qtd;
+
+    if(total>100){
+        discount = total*0.05;
+        total -= discount;
+    }
+    res.innerHTML = `O desconto na compra foi de R$${discount} e o total é de $${total}`
+    
+}
