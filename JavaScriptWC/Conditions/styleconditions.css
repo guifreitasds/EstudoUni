@@ -107,3 +107,13 @@ form#vac > div > input.buttons:hover{
     color: white;
     border-color: white;
 }
+
+form#imo, form#imo>h1{
+    background-color: #5e390d;
+}
+
+form#imo > div > input.buttons:hover{
+    background-color: #5e390d;
+    color: white;
+    border-color: white;
+}
