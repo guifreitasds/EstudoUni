@@ -121,5 +121,21 @@ function checarBuy() {
 }
 
 function sellOfCorretor() {
-    
+    var name = document.getElementById('namecorrid').value;
+    var sell = document.getElementById('pricesellid').value;
+    var percommi = 0;
+    var res = document.getElementById('rescorr');
+
+    if(sell>50000){
+        var percommi = 12;
+        var comission = sell*(percommi/100);
+    } else if(sell>=30000){
+        var percommi = 9.5;
+        var comission = sell*(percommi/100);
+    } else{
+        var percommi = 7;
+        var comission = sell*(percommi/100);
+    }
+
+    res.innerHTML = `Olá, ${name}! Você fez uma venda de R$${sell}, Parabéns aqui está sua comissão de ${percommi}%: R$${comission.toFixed(2)}`
 }
