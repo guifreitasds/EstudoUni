@@ -97,9 +97,9 @@ function checarVac() {
     var res = document.getElementById('resvac');
 
     if((pac=='C' || pac=='c') && age <=5){
-        res.innerHTML = `Criança de ${age} anos, vacinação permitida`
+        res.innerHTML = `Criança de ${age} anos, vacinação permitida`;
     }else{
-        res.innerHTML = `Paciente de ${age} anos, vacinação não permitida`
+        res.innerHTML = `Paciente de ${age} anos, vacinação não permitida`;
     }
 }
 
@@ -116,6 +116,10 @@ function checarBuy() {
         discount = total*0.05;
         total -= discount;
     }
-    res.innerHTML = `O desconto na compra foi de R$${discount} e o total é de $${total}`
+    res.innerHTML = `O desconto na compra foi de R$${discount} e o total é de $${total}`;
+    
+}
+
+function sellOfCorretor() {
     
 }
