@@ -1,4 +1,5 @@
 function checarIMC() {
+    // Exercicio 001 e 002
     var weight = document.getElementById('weight');
     var height = document.getElementById('height');
     var resultado ='';
@@ -32,6 +33,7 @@ function checarIMC() {
 }
 
 function checarPI() {
+    // Exercicio 003
     var n = document.getElementById('numberid').value;
 
     var res = document.getElementById('reseven');
@@ -44,6 +46,7 @@ function checarPI() {
 }
 
 function comprarComb() {
+    // Exercicio 004 e 005
     var typegas = document.getElementById('numbergas').value;
     var qtd = document.getElementById('qtdgas').value;
     var res = document.getElementById('resbuy');
@@ -58,6 +61,7 @@ function comprarComb() {
 }
 
 function checarIdade() {
+    // Exercicio 006
     var year = document.getElementById('ageid').value;
     var data = new Date();
     const actual = data.getFullYear();
@@ -71,6 +75,7 @@ function checarIdade() {
 }
 
 function comprarMor() {
+    // Exercicio 007
     var qtd = document.getElementById('strawid').value;
     var total = 0;
     var res = document.getElementById('resstraw')
@@ -85,6 +90,7 @@ function comprarMor() {
 }
 
 function checarVac() {
+    // Exercicio 008
     var pac = document.getElementById('childid').value;
     var age = document.getElementById('agechild').value;
 
@@ -98,6 +104,7 @@ function checarVac() {
 }
 
 function checarBuy() {
+    // Exercicio 009
     var price = document.getElementById('priceid').value;
     var qtd = document.getElementById('qtdid').value;
 
