@@ -203,14 +203,14 @@
     <form action="" class="marrom">
         <h1>Company YouWork</h1>
         <div>
-            <label for="namecorrid">Escolha seu plano de trabalho</label>
-            <input type="radio" id="radresidencial" name="escons" required class="fields">A
-            <input type="radio" id="radcomercial" name="escons" required class="fields">B
-            <input type="radio" id="radindustrial" name="escons" required class="fields">C
+            <label>Escolha seu plano de trabalho</label>
+            <input type="radio" name="escwork" required class="fields">A
+            <input type="radio" name="escwork" required class="fields">B
+            <input type="radio" name="escwork" required class="fields">C
         </div>
         <div>
-            <label for="pricesellid">Digite o valor da sua venda</label>
-            <input type="number" id="pricesellid" required class="fields" placeholder="Digite o valor de venda">
+            <label for="salarywork">Digite o valor do seu sálario</label>
+            <input type="number" id="salarywork" required class="fields" placeholder="Salário em R$" step="0.1">
         </div>
         <div>
             <input type="reset" value="Limpar campos" class="buttons">
@@ -218,7 +218,7 @@
         <div>
             <input type="button" value="Pedir Aumento" class="buttons" onclick="AccountWater()">
         </div>
-        <div id="reswater">
+        <div id="reswork">
             O seu aumento aparecerá aqui
         </div>
     </form>

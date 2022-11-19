@@ -162,8 +162,28 @@ function AccountWater() {
         }
         conta += 0.04*qtdwater;
     }
-    res.innerHTML = `Você é consumidor ${consumidor} e o total a pagar da sua conta é de R$${conta.toFixed(2)}`
+    res.innerHTML = `Você é consumidor ${consumidor} e o total a pagar da sua conta é de R$${conta.toFixed(2)}`;
+}
 
+function AccountWater() {
+    var typeplan = document.getElementsByName('escwork');
+    var salary = Number(document.getElementById('salarywork').value);
+    var typework = '';
+    var percent = 0;
+    var res = document.getElementById('reswork');
 
-    console.log(consumidor);
+    if(typeplan[0].checked){
+        salary += salary*0.10;
+        typework = 'A';
+        percent = 10;
+    } else if(typeplan[1].checked){
+        salary += salary*0.15;
+        typework = 'B';
+        percent = 15;
+    } else if (typeplan[2].checked){
+        salary += salary*0.20;
+        typework = 'C';
+        percent = 20;
+    }
+    res.innerHTML = `Você tem o plano ${typework} e o total do seu salário após o aumento de ${percent}% é de R$${salary.toFixed(2)}`;
 }
