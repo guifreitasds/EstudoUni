@@ -180,21 +180,21 @@
         <h1>SANEAGO: Àgua!</h1>
         <div>
             <label for="namecorrid">Escolha qual consumidor você é</label>
-            <input type="radio" id="radresidencial" name="escons" required class="fields">Residencial
-            <input type="radio" id="radcomercial" name="escons" required class="fields">Comercial
-            <input type="radio" id="radindustrial" name="escons" required class="fields">Industrial
+            <input type="radio" id="radresidencial" name="escons" required class="fields" value="1">Residencial
+            <input type="radio" id="radcomercial" name="escons" required class="fields" value="2">Comercial
+            <input type="radio" id="radindustrial" name="escons" required class="fields" value="3">Industrial
         </div>
         <div>
-            <label for="pricesellid">Digite o seu consumo de água em m²</label>
+            <label for="qtdwater">Digite o seu consumo de água em m²</label>
             <input type="number" id="qtdwater" required class="fields" placeholder="Consumo em m²">
         </div>
         <div>
             <input type="reset" value="Limpar campos" class="buttons">
         </div>
         <div>
-            <input type="button" value="Comprar" class="buttons" onclick="sellOfCorretor()">
+            <input type="button" value="Comprar" class="buttons" onclick="AccountWater()">
         </div>
-        <div id="rescorr">
+        <div id="reswater">
             A sua conta aparecerá aqui
         </div>
     </form>

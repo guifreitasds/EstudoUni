@@ -137,5 +137,33 @@ function sellOfCorretor() {
         var comission = sell*(percommi/100);
     }
 
-    res.innerHTML = `Olá, ${name}! Você fez uma venda de R$${sell}, Parabéns aqui está sua comissão de ${percommi}%: R$${comission.toFixed(2)}`
+    res.innerHTML = `Olá, ${name}! Você fez uma venda de R$${sell}, Parabéns aqui está sua comissão de ${percommi}%: R$${comission.toFixed(2)}`;
+}
+
+function AccountWater() {
+    var constype = document.getElementsByName('escons');
+    var qtdwater = document.getElementById('qtdwater').value;
+    var conta = 0;
+    var res = document.getElementById('reswater');
+
+    if(constype[0].checked){
+        var consumidor = 'Residencial';
+        var conta = 5+(0.05*qtdwater);
+    } else if(constype[1].checked){
+        var consumidor = 'Comercial';
+        if(qtdwater>=80){
+            conta += 500;
+        }
+        conta += 0.25*qtdwater;
+    } else if (constype[2].checked){
+        var consumidor = 'Industrial';
+        if(qtdwater>=100){
+            conta += 800;
+        }
+        conta += 0.04*qtdwater;
+    }
+    res.innerHTML = `Você é consumidor ${consumidor} e o total a pagar da sua conta é de R$${conta.toFixed(2)}`
+
+
+    console.log(consumidor);
 }
