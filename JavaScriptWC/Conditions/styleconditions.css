@@ -117,3 +117,13 @@ form#imo > div > input.buttons:hover{
     color: white;
     border-color: white;
 }
+
+form.marrom, form.marrom>h1{
+    background-color: #5e390d;
+}
+
+form.marrom > div > input.buttons:hover{
+    background-color: #5e390d;
+    color: white;
+    border-color: white;
+}
