@@ -222,6 +222,33 @@
             O seu aumento aparecerá aqui
         </div>
     </form>
+
+    <p>Ex 013</p>
+    <form action="" class="grey">
+        <h1>Verificador de Preço de venda</h1>
+        <div>
+            <label>Escolha o tipo do produto</label>
+            <input type="radio" name="esctype" required class="fields">1 Hortifruti
+            <input type="radio" name="esctype" required class="fields">2 Laticineos
+            <input type="radio" name="esctype" required class="fields">3 Carnes
+            <input type="radio" name="esctype" required class="fields">4 Peixes
+            <input type="radio" name="esctype" required class="fields">5 Aves
+            <input type="radio" name="esctype" required class="fields">6 Ovos
+        </div>
+        <div>
+            <label for="salarywork">Digite o valor de custo do produto</label>
+            <input type="number" id="salarywork" required class="fields" placeholder="Custo em R$" step="0.1">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campos" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Verificar preço" class="buttons" onclick="AccountWater()">
+        </div>
+        <div id="resprice">
+            O preço de venda recomendado aparecerá aqui
+        </div>
+    </form>
     <script src="scriptconditions.js"></script>
 </body>
 </html>

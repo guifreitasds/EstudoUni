@@ -128,3 +128,13 @@ form.marrom > div > input.buttons:hover{
     border-color: white;
 }
 
+form.grey, form.grey>h1{
+    background-color: #3f3f3f;
+}
+
+form.grey > div > input.buttons:hover{
+    background-color: #3f3f3f;
+    color: white;
+    border-color: white;
+}
+
