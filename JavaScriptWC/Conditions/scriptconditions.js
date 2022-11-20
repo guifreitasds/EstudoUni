@@ -187,3 +187,24 @@ function AccountWater() {
     }
     res.innerHTML = `Você tem o plano ${typework} e o total do seu salário após o aumento de ${percent}% é de R$${salary.toFixed(2)}`;
 }
+
+
+function VerifyPrice() {
+    var typeproduct = document.getElementsByName('esctype');
+    var pricecust = Number(document.getElementById('pricecust').value);
+    var percent = 0;
+    var res = document.getElementById('resprice');
+
+    if(typeproduct[0].checked || typeproduct[1].checked){
+        pricecust += pricecust*0.80;
+        percent = 80;
+    } else if(typeproduct[2].checked || typeproduct[3].checked){
+        pricecust += pricecust;
+        percent = 100;
+    } else if (typeproduct[4].checked || typeproduct[5].checked){
+        pricecust += pricecust*0.90;
+        percent = 90;
+    }
+
+    res.innerHTML = `O preço de venda recomendado a esse produto é de R$${pricecust}, com margem de ${percent}%`
+}
