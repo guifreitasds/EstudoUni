@@ -249,6 +249,28 @@
             O preço de venda recomendado aparecerá aqui
         </div>
     </form>
+
+    <p>Ex 014</p>
+    <form action="" id="gastation">
+        <h1>Posto de Gasolina</h1>
+        <div>
+            <label for="numbergaswithdisc">Escolha o combustível</label>
+            <input type="number" id="numbergaswithdisc" required class="fields" placeholder="1 - Álcool // 2 - Gasolina">
+        </div>
+        <div>
+            <label for="qtdgaswithdisc">Quantos litros você deseja?</label>
+            <input type="number" id="qtdgaswithdisc" required class="fields" placeholder="Escolha em L">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campos" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Comprar" class="buttons" onclick="comprarCombwithdisc()">
+        </div>
+        <div id="resbuygas">
+            O total da compra aparecerá aqui
+        </div>
+    </form>
     <script src="scriptconditions.js"></script>
 </body>
 </html>

@@ -208,3 +208,27 @@ function VerifyPrice() {
 
     res.innerHTML = `O preço de venda recomendado a esse produto é de R$${pricecust}, com margem de ${percent}%`
 }
+
+function comprarCombwithdisc() {
+    // Exercicio 004 e 005
+    var typegas = document.getElementById('numbergaswithdisc').value;
+    var qtd = document.getElementById('qtdgaswithdisc').value;
+    var res = document.getElementById('resbuygas');
+
+    var pricealcohol = 3.16;
+    var pricegaso = 4.20;
+    if(typegas==1){
+        if(qtd>20){
+            pricealcohol = 3.14;
+        }
+        var total = pricealcohol*qtd;
+        res.innerHTML = `O total da compra é de $${total.toFixed(2)}`;
+    }
+    else if(typegas==2){
+        if(qtd>30){
+            pricegaso = 4.19;
+        }
+        var total = pricegaso*qtd;
+        res.innerHTML = `O total da compra é de R$${total.toFixed(2)}`;
+    }
+}
