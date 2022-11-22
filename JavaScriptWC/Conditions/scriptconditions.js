@@ -1,3 +1,6 @@
+// Lista de condicionais
+
+
 function checarIMC() {
     // Exercicio 001 e 002
     var weight = document.getElementById('weight');
