@@ -52,3 +52,21 @@ function calcpot() {
     res.innerHTML = `O resultado de ${base} elevado a ${exp} = ${total}`
 
 }
+
+function calcmulti() {
+    var esc = 0;
+    var total = 1;
+    var res = document.getElementById('rescalcmulti');
+
+    while(true){
+        esc = window.prompt('Quer Multiplicar? (Digite 1 abaixo para parar de multiplicar)');
+        if(esc==1){
+            break;
+        }
+        total*= window.prompt('Digite o valor a ser multiplicado');
+
+    }
+
+    res.innerHTML = `O resultado do produto entre os valores digitados é: ${total}`
+
+}
