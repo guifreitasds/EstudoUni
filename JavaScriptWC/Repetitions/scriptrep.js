@@ -20,6 +20,9 @@ function fatorial(num) {
 
 
 function storebonus() {
+    // Exercicio 002
+
+    // Recado ao prof: Confesso que não entendi como utilizar o laço de repetição aqui
     var name = document.getElementById('nameid').value;
     var total = document.getElementById('valuebuyid').value;
     var res = document.getElementById('resbonus');
@@ -33,4 +36,19 @@ function storebonus() {
     }
 
     res.innerHTML = `Olá, ${name}. Você recebeu um bônus de ${percentbonus}% em cima do valor total das suas compras no ano, com o total de R$${bonus}`
+}
+
+function calcpot() {
+    var res = document.getElementById('rescalcpot');
+    var base = document.getElementById('baseid').value;
+    var total = 0;
+    var exp = document.getElementById('expid').value;
+    var control = exp
+
+    while(control>1){
+        total += base*base;
+        control--;
+    }
+    res.innerHTML = `O resultado de ${base} elevado a ${exp} = ${total}`
+
 }

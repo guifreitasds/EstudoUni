@@ -21,7 +21,7 @@
             <input type="reset" value="Limpar campo" class="buttons">
         </div>
         <div>
-            <input type="button" value="Checar Número" class="buttons" onclick="fatorial(document.getElementById('numberid').value)">
+            <input type="button" value="Checar Fatorial" class="buttons" onclick="fatorial(document.getElementById('numberid').value)">
         </div>
         <div id="resfatorial">
             O resultado aparecerá aqui
@@ -43,9 +43,31 @@
             <input type="reset" value="Limpar campo" class="buttons">
         </div>
         <div>
-            <input type="button" value="Checar Número" class="buttons" onclick="storebonus()">
+            <input type="button" value="Checar Bônus" class="buttons" onclick="storebonus()">
         </div>
         <div id="resbonus">
+            O resultado aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 003</p>
+    <form action="">
+        <h1>Calculadora de Potência</h1>
+        <div>
+            <label for="">Digite a base da potenciação</label>
+            <input type="text" id="baseid" required class="fields" placeholder="Base">
+        </div>
+        <div>
+            <label for="">Digite o expoente</label>
+            <input type="number" id="expid" required class="fields" placeholder="Expoente">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campo" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Checar Número" class="buttons" onclick="calcpot()">
+        </div>
+        <div id="rescalcpot">
             O resultado aparecerá aqui
         </div>
     </form>
