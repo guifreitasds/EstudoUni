@@ -121,6 +121,7 @@ function checarBuy() {
 }
 
 function sellOfCorretor() {
+    // Exercicio 010
     var name = document.getElementById('namecorrid').value;
     var sell = document.getElementById('pricesellid').value;
     var percommi = 0;
@@ -141,6 +142,7 @@ function sellOfCorretor() {
 }
 
 function AccountWater() {
+    // Exercicio 011
     var constype = document.getElementsByName('escons');
     var qtdwater = document.getElementById('qtdwater').value;
     var conta = 0;
@@ -165,7 +167,8 @@ function AccountWater() {
     res.innerHTML = `Você é consumidor ${consumidor} e o total a pagar da sua conta é de R$${conta.toFixed(2)}`;
 }
 
-function AccountWater() {
+function SalaryIncrease() {
+    // Exercicio 012
     var typeplan = document.getElementsByName('escwork');
     var salary = Number(document.getElementById('salarywork').value);
     var typework = '';
@@ -190,6 +193,7 @@ function AccountWater() {
 
 
 function VerifyPrice() {
+    // Exercicio 013
     var typeproduct = document.getElementsByName('esctype');
     var pricecust = Number(document.getElementById('pricecust').value);
     var percent = 0;
@@ -210,7 +214,7 @@ function VerifyPrice() {
 }
 
 function comprarCombwithdisc() {
-    // Exercicio 004 e 005
+    // Exercicio 014
     var typegas = document.getElementById('numbergaswithdisc').value;
     var qtd = document.getElementById('qtdgaswithdisc').value;
     var res = document.getElementById('resbuygas');
