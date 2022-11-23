@@ -94,7 +94,9 @@ function researchCinema() {
     }
 
     console.log(qtd)
-    res.innerHTML = `<p>Qtd. de ótimos: ${oti} pessoas</p>
+    res.innerHTML = `
+    <h2>Resultado da pesquisa</h2>
+    <p>Qtd. de ótimos: ${oti} pessoas</p>
     <p>Qtd. de bom: ${bom} pessoas</p>
     <p>Qtd. de regular: ${reg} pessoas</p>
     <p>Média de idades: ${Number(sumidades/qtd)} anos</p>
