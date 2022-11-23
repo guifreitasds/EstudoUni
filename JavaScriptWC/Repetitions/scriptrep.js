@@ -70,3 +70,33 @@ function calcmulti() {
     res.innerHTML = `O resultado do produto entre os valores digitados é: ${total}`
 
 }
+
+function researchCinema() {
+    var qtd = 0;
+    var reg = 0;
+    var bom = 0;
+    var oti = 0;
+    var res = document.getElementById('research');
+
+    var sumidades = 0;
+    // Fiz com apenas 5 pessoas para facilitar o teste 
+    while(qtd<5){ 
+        qtd++;
+        sumidades += Number(window.prompt('Qual a sua idade?'));
+        var opinion = window.prompt('Avaliação do filme [1-Regular, 2-Bom, 3-Ótimo]');
+        if(opinion==1){
+            reg++;
+        } else if(opinion==2){
+            bom++;
+        } else if(opinion==3){
+            oti++;
+        }
+    }
+
+    console.log(qtd)
+    res.innerHTML = `<p>Qtd. de ótimos: ${oti} pessoas</p>
+    <p>Qtd. de bom: ${bom} pessoas</p>
+    <p>Qtd. de regular: ${reg} pessoas</p>
+    <p>Média de idades: ${Number(sumidades/qtd)} anos</p>
+    <p>Porcentagem de bom: ${(bom/qtd)*100}%</p>`
+}
