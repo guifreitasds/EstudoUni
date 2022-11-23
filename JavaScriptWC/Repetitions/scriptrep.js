@@ -196,3 +196,38 @@ function verifyStudents() {
     <p>A altura média dos alunos com mais de 20 anos é ${sumaltura/qtdalunosage.toFixed(2)}</p>
     `
 }
+
+
+function verifyAge() {
+
+    var lilchild = 0;
+    var bigchild = 0;
+    var teen = 0;
+    var adult = 0;
+    var old = 0;
+    var res = document.getElementById('resageverify');
+    while(true){
+        age = Number(window.prompt('Digite a idade da pessoa [-1 para parar]'));
+        if(age<0){
+            break;
+        }
+        if(age>=0 && age<=5){
+            lilchild++;
+        } else if(age>=6 && age<=13){
+            bigchild++;
+        }  else if(age>=14 && age<=17){
+            teen++;
+        } else if(age>=18 && age<=59){
+            adult++;
+        } else if(age>=60){
+            old++;
+        }
+    }
+
+    res.innerHTML = `
+    <p>N° de crianças pequenas: ${lilchild}</p>
+    <p>N° de crianças grandes: ${bigchild}</p>
+    <p>N° de adolescentes: ${teen}</p>
+    <p>N° de adultos: ${adult}</p>
+    <p>N° de idosos: ${old}</p>`
+}
