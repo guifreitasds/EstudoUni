@@ -102,3 +102,34 @@ function researchCinema() {
     <p>Média de idades: ${Number(sumidades/qtd)} anos</p>
     <p>Porcentagem de bom: ${(bom/qtd)*100}%</p>`
 }
+
+
+function calcSalary() {
+    var namemaior = '';
+    var maior = 0;
+    var namemenor = '';
+    var menor = 99999999;
+    var res = document.getElementById('resalary');
+    somasalary=0;
+    var qtdfuncs = document.getElementById('qtdfuncid').value;
+    const qtdfuncsfix=qtdfuncs;
+    while(qtdfuncs!=0){
+        var name = window.prompt('Nome do funcionário');
+        var salary = Number(window.prompt('Salário do funcionário'));
+        somasalary+=salary;
+        if(salary>maior){
+            maior=salary;
+            namemaior=name;
+        }
+        if(salary<menor){
+            menor = salary;
+            namemenor = name;
+        }
+        qtdfuncs--;
+    }
+    res.innerHTML = `
+    <p>Média dos salários: R$${somasalary/qtdfuncsfix}</p>
+    <p>Maior salário: ${namemaior}, salário de R$${maior}</p>
+    <p>Menor salário: ${namemenor}, salário de R$${menor}</p>
+    `
+}

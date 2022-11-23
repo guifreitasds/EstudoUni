@@ -14,7 +14,7 @@
     <form action="">
         <h1>Fatorial</h1>
         <div>
-            <label for="">Digite o n° abaixo</label>
+            <label for="numberid">Digite o n° abaixo</label>
             <input type="number" id="numberid" required class="fields" placeholder="Digite o fatorial desejado">
         </div>
         <div>
@@ -32,11 +32,11 @@
     <form action="">
         <h1>Bônus Lojinha da Esquina</h1>
         <div>
-            <label for="">Nome</label>
+            <label for="nameid">Nome</label>
             <input type="text" id="nameid" required class="fields" placeholder="Digite seu nome">
         </div>
         <div>
-            <label for="">Digite o total das suas compras no ano passado</label>
+            <label for="valuebuyid">Digite o total das suas compras no ano passado</label>
             <input type="number" id="valuebuyid" required class="fields" placeholder="Valor de compra total em R$">
         </div>
         <div>
@@ -54,11 +54,11 @@
     <form action="">
         <h1>Calculadora de Potência</h1>
         <div>
-            <label for="">Digite a base da potenciação</label>
+            <label for="baseid">Digite a base da potenciação</label>
             <input type="text" id="baseid" required class="fields" placeholder="Base">
         </div>
         <div>
-            <label for="">Digite o expoente</label>
+            <label for="expid">Digite o expoente</label>
             <input type="number" id="expid" required class="fields" placeholder="Expoente">
         </div>
         <div>
@@ -97,6 +97,10 @@
     <p>Ex 006</p>
     <form action="">
         <h1>Verificador de Salários</h1>
+        <div>
+            <label for="qtdfuncid">Digite a quantidade de funcionários</label>
+            <input type="number" id="qtdfuncid" required class="fields" placeholder="Qtd de funcionários">
+        </div>
         <div>
             <input type="button" value="Começar a verificar" class="buttons" onclick="calcSalary()">
         </div>
