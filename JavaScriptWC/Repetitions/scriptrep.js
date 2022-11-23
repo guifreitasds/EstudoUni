@@ -80,7 +80,20 @@ function researchCinema() {
 
     var sumidades = 0;
     // Fiz com apenas 5 pessoas para facilitar o teste 
-    while(qtd<5){ 
+    // while(qtd<5){ 
+    //     qtd++;
+    //     sumidades += Number(window.prompt('Qual a sua idade?'));
+    //     var opinion = window.prompt('Avaliação do filme [1-Regular, 2-Bom, 3-Ótimo]');
+    //     if(opinion==1){
+    //         reg++;
+    //     } else if(opinion==2){
+    //         bom++;
+    //     } else if(opinion==3){
+    //         oti++;
+    //     }
+    // }
+
+    for(i=qtd;i<5;i++){
         qtd++;
         sumidades += Number(window.prompt('Qual a sua idade?'));
         var opinion = window.prompt('Avaliação do filme [1-Regular, 2-Bom, 3-Ótimo]');
@@ -127,6 +140,20 @@ function calcSalary() {
         }
         qtdfuncs--;
     }
+
+    // for(i=qtdfuncs;i!=0;i--){
+    //     var name = window.prompt('Nome do funcionário');
+    //     var salary = Number(window.prompt('Salário do funcionário'));
+    //     somasalary+=salary;
+    //     if(salary>maior){
+    //         maior=salary;
+    //         namemaior=name;
+    //     }
+    //     if(salary<menor){
+    //         menor = salary;
+    //         namemenor = name;
+    //     }
+    // }
     res.innerHTML = `
     <p>Média dos salários: R$${somasalary/qtdfuncsfix}</p>
     <p>Maior salário: ${namemaior}, salário de R$${maior}</p>
