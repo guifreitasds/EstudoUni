@@ -165,3 +165,34 @@ function calcSalary() {
     <p>Menor salário: ${namemenor}, salário de R$${menor}</p>
     `
 }
+
+function verifyStudents() {
+    // Exercicio 007
+    qtd=0;
+    var qtdalunosheight = 0;
+    var qtdalunosage = 0;
+    var sumidade=0;
+    var sumaltura=0;
+
+    // O exercicio pede 45 alunos, fiz com 5 para facilitar o teste
+    while(qtd<3){
+        qtd++;
+        var idade = Number(window.prompt('Digite a idade do aluno: '));
+        var altura = Number(window.prompt('Digite a altura do aluno'));
+        var res = document.getElementById('resverifyst');
+
+        if(altura<1.70){
+            sumidade += idade;
+            qtdalunosheight++;
+        }
+        if(idade>20){
+            sumaltura += altura;
+            qtdalunosage++;
+        }
+    }
+
+    res.innerHTML = `
+    <p>A idade média dos alunos com menos de 1,70m de altura é ${sumidade/qtdalunosheight}</p>
+    <p>A altura média dos alunos com mais de 20 anos é ${sumaltura/qtdalunosage.toFixed(2)}</p>
+    `
+}
