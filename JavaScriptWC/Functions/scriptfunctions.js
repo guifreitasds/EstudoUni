@@ -44,9 +44,16 @@ function storetypepay(buyvalue, paytype) {
 }
 
 function colandlines(x, y) {
-    var res = document.getElementById('rescandl')
+    var res = document.getElementById('rescandl');
     while(y!=0){
-        res.innerHTML += `<p>${'*'.repeat(x)}</p>`
-        y--
+        res.innerHTML += `<p>${'*'.repeat(x)}</p>`;
+        y--;
     }
+}
+
+function pot(b, e) {
+    var res = document.getElementById('resbasexp');
+    var calc = b**e;
+
+    res.innerHTML = `O resultado de ${b} elevado a ${e} = ${calc}`;
 }
