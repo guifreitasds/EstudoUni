@@ -75,3 +75,11 @@ function createArray(size) {
     res.innerHTML = `Valor ${find} encontrado na posição ${pos}`;
     }
 }
+
+function calcDistance(vf, time, accel) {
+    var res = document.getElementById('resdistance');
+    vi = vf-(accel/time);
+    var distance = vi*time+accel*time**2;
+
+    res.innerHTML=`A distância percorrida foi de ${distance.toFixed(2)}m`
+}

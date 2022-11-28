@@ -159,15 +159,23 @@
 
     <p class="titleex">Ex 008</p>
     <form action="">
-        <h1>Teste</h1>
+        <h1>Calculadora Fisica de Distância</h1>
         <div>
-            <label for="tamid">Digite o tamanho do vetor</label>
-            <input type="number" id="tamid" required class="fields" placeholder="Tamanho Array" step="1">
+            <label for="veloid">Digite a velocidade final</label>
+            <input type="number" id="veloid" required class="fields" placeholder="Em m/s" step="">
         </div>
         <div>
-            <input type="button" value="Criar Array" class="buttons" onclick="createArray(document.getElementById('tamid').value)">
+            <label for="timeid">Digite o tempo para percorrer</label>
+            <input type="number" id="timeid" required class="fields" placeholder="Em segundos" step="">
+        </div>
         <div>
-        <div id="resarray">
+            <label for="accid">Digite a aceleração</label>
+            <input type="number" id="accid" required class="fields" placeholder="em m/s^2" step="">
+        </div>
+        <div>
+            <input type="button" value="Calcular Distância" class="buttons" onclick="calcDistance(document.getElementById('veloid').value,document.getElementById('timeid').value, document.getElementById('accid').value)">
+        <div>
+        <div id="resdistance">
             O resultado aparecerá aqui
         </div>
     </form>
