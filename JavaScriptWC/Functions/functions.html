@@ -78,6 +78,28 @@
 
     <p class="titleex">Ex 004</p>
     <form action="">
+        <h1>Pagamento parcelado</h1>
+        <div>
+            <label for="buytypeid">Digite o valor de compra</label>
+            <input type="number" id="buytypeid" required class="fields" placeholder="Valor de compra">
+        </div>
+        <div>
+            <label for="paytypeid">Digite o tipo de pagamento [1-À Vista, 2-Até 2x, 3-Até 10x]</label>
+            <input type="number" id="paytypeid" required class="fields" placeholder="Tipo de pagamento">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campo" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Comprar" class="buttons" onclick="storetypepay(document.getElementById('buytypeid').value, document.getElementById('paytypeid').value)">
+        </div>
+        <div id="restorediscount">
+            O resultado aparecerá aqui
+        </div>
+    </form>
+
+    <p class="titleex">Ex 005</p>
+    <form action="">
         <h1>Impressão de *</h1>
         <div>
             <label for="colsid">Digite a quantidade de colunas</label>
@@ -98,7 +120,7 @@
         </div>
     </form>
 
-    <p class="titleex">Ex 005</p>
+    <p class="titleex">Ex 006</p>
     <form action="">
         <h1>Calculo de potenciação</h1>
         <div>

@@ -33,8 +33,9 @@ function storediscount(buyvalue) {
 
 function storetypepay(buyvalue, paytype) {
     var res = document.getElementById('restorediscount');
+    console.log(buyvalue)
     if(paytype==1){
-        buyvalue = buyvalue-buyvalue*0.1;
+        buyvalue -= buyvalue*0.1;
         res.innerHTML = `Opção à vista escolhida, valor total: ${buyvalue}`;
     } else if(paytype==2){
         res.innerHTML = `Opção dividir em 2 vezes escolhida, valor total: ${buyvalue}`;
