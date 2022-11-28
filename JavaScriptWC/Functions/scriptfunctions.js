@@ -8,3 +8,14 @@ function division(x,y) {
     }
     res.innerHTML = `A divisão entre ${x} e ${y} = ${x/y}`;
 }
+
+function triangle(x,y,z) {
+    var res = document.getElementById('restriangle')
+    if(x==y && y==z){
+        res.innerHTML = `Esses lados representam um triângulo equilátero`
+    } else if(x==y || y==z || z==x){
+        res.innerHTML = `Esses lados representam um triângulo isosceles`
+    } else{
+        res.innerHTML = `Esses lados representam um triângulo escaleno`
+    }
+}

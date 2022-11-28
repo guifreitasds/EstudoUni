@@ -34,22 +34,26 @@
 
     <p>Ex 002</p>
     <form action="">
-        <h1>Bônus Lojinha da Esquina</h1>
+        <h1>Verificador de Triângulo</h1>
         <div>
-            <label for="nameid">Nome</label>
-            <input type="text" id="nameid" required class="fields" placeholder="Digite seu nome">
+            <label for="side1id">Digite o tamanho do 1° lado</label>
+            <input type="number" id="side1id" required class="fields" placeholder="centímetros">
         </div>
         <div>
-            <label for="valuebuyid">Digite o total das suas compras no ano passado</label>
-            <input type="number" id="valuebuyid" required class="fields" placeholder="Valor de compra total em R$">
+            <label for="side2id">Digite o tamanho do 2° lado</label>
+            <input type="number" id="side2id" required class="fields" placeholder="centímetros">
+        </div>
+        <div>
+            <label for="side3id">Digite o tamanho do 3° lado</label>
+            <input type="number" id="side3id" required class="fields" placeholder="centímetros">
         </div>
         <div>
             <input type="reset" value="Limpar campo" class="buttons">
         </div>
         <div>
-            <input type="button" value="Checar Bônus" class="buttons" onclick="storebonus()">
+            <input type="button" value="Checar Triângulo" class="buttons" onclick="triangle(Number(document.getElementById('side1id').value), Number(document.getElementById('side2id').value), Number(document.getElementById('side3id').value))">
         </div>
-        <div id="resbonus">
+        <div id="restriangle">
             O resultado aparecerá aqui
         </div>
     </form>
