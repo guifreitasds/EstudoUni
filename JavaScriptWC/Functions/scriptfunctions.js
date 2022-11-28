@@ -30,3 +30,23 @@ function storediscount(buyvalue) {
         return `Você recebeu um desconto de ${buyvalue*0.15}(10%) em cima do valor da sua compra de R$${buyvalue}, valor final: ${buyvalue-buyvalue*0.15}`
     }
 }
+
+function storetypepay(buyvalue, paytype) {
+    var res = document.getElementById('restorediscount');
+    if(paytype==1){
+        buyvalue = buyvalue-buyvalue*0.1;
+        res.innerHTML = `Opção à vista escolhida, valor total: ${buyvalue}`;
+    } else if(paytype==2){
+        res.innerHTML = `Opção dividir em 2 vezes escolhida, valor total: ${buyvalue}`;
+    } else if(paytype==3){
+        res.innerHTML = `Opção dividir em mais de 2 vezes, valor total: ${buyvalue}`;
+    }
+}
+
+function colandlines(x, y) {
+    var res = document.getElementById('rescandl')
+    while(y!=0){
+        res.innerHTML += `<p>${'*'.repeat(x)}</p>`
+        y--
+    }
+}
