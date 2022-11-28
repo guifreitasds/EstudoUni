@@ -19,3 +19,14 @@ function triangle(x,y,z) {
         res.innerHTML = `Esses lados representam um triângulo escaleno`
     }
 }
+
+function storediscount(buyvalue) {
+    var res = document.getElementById('restored')
+    if(buyvalue>500){
+        res.innerHTML = `Você recebeu um desconto de ${buyvalue*0.1}(10%) em cima do valor da sua compra de R$${buyvalue}, valor final: R$${buyvalue-buyvalue*0.1}` 
+        return `Você recebeu um desconto de ${buyvalue*0.1}(10%) em cima do valor da sua compra de R$${buyvalue}, valor final: ${buyvalue-buyvalue*0.1}`
+    } else{
+        res.innerHTML = `Você recebeu um desconto de ${buyvalue*0.15}(10%) em cima do valor da sua compra de R$${buyvalue}, valor final: R$${buyvalue-buyvalue*0.15}`
+        return `Você recebeu um desconto de ${buyvalue*0.15}(10%) em cima do valor da sua compra de R$${buyvalue}, valor final: ${buyvalue-buyvalue*0.15}`
+    }
+}
