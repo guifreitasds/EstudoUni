@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições</title>
+    <link rel="stylesheet" href="../Conditions/styleconditions.css">
+</head>
+<body>
+    <h1>Exercícios de Repetições</h1>
+
+    <p>Ex 001</p>
+    <form action="">
+        <h1>Calculadora de divisão</h1>
+        <div>
+            <label for="numberid">Digite o n° abaixo</label>
+            <input type="number" id="numberid" required class="fields" placeholder="Digite o 1° número desejado">
+        </div>
+        <div>
+            <label for="numberid">Digite o n° abaixo</label>
+            <input type="number2" id="numberid2" required class="fields" placeholder="Digite o 2° número desejado">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campo" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Calcular" class="buttons" onclick="division(document.getElementById('numberid').value, document.getElementById('numberid2').value)">
+        </div>
+        <div id="resdivision">
+            O resultado aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 002</p>
+    <form action="">
+        <h1>Bônus Lojinha da Esquina</h1>
+        <div>
+            <label for="nameid">Nome</label>
+            <input type="text" id="nameid" required class="fields" placeholder="Digite seu nome">
+        </div>
+        <div>
+            <label for="valuebuyid">Digite o total das suas compras no ano passado</label>
+            <input type="number" id="valuebuyid" required class="fields" placeholder="Valor de compra total em R$">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campo" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Checar Bônus" class="buttons" onclick="storebonus()">
+        </div>
+        <div id="resbonus">
+            O resultado aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 003</p>
+    <form action="">
+        <h1>Calculadora de Potência</h1>
+        <div>
+            <label for="baseid">Digite a base da potenciação</label>
+            <input type="text" id="baseid" required class="fields" placeholder="Base">
+        </div>
+        <div>
+            <label for="expid">Digite o expoente</label>
+            <input type="number" id="expid" required class="fields" placeholder="Expoente">
+        </div>
+        <div>
+            <input type="reset" value="Limpar campo" class="buttons">
+        </div>
+        <div>
+            <input type="button" value="Checar Número" class="buttons" onclick="calcpot()">
+        </div>
+        <div id="rescalcpot">
+            O resultado aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 004</p>
+    <form action="">
+        <h1>Pesquisa do filme assistido</h1>
+        <div>
+            <input type="button" value="Começar Pesquisa" class="buttons" onclick="researchCinema()">
+        </div>
+        <div id="research">
+            O resultado da pesquisa aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 005</p>
+    <form action="">
+        <h1>Calculadora de Produto</h1>
+        <div>
+            <input type="button" value="Começar a multiplicar" class="buttons" onclick="calcmulti()">
+        </div>
+        <div id="rescalcmulti">
+            O resultado do produto aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 006</p>
+    <form action="">
+        <h1>Verificador de Salários</h1>
+        <div>
+            <label for="qtdfuncid">Digite a quantidade de funcionários</label>
+            <input type="number" id="qtdfuncid" required class="fields" placeholder="Qtd de funcionários">
+        </div>
+        <div>
+            <input type="button" value="Começar a verificar" class="buttons" onclick="calcSalary()">
+        </div>
+        <div id="resalary">
+            O resultado da verificação aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 007</p>
+    <form action="">
+        <h1>Analisador de sala de aula</h1>
+        <div>
+            <input type="button" value="Começar a analisar" class="buttons" onclick="verifyStudents()">
+        </div>
+        <div id="resverifyst">
+            O resultado da análise aparecerá aqui
+        </div>
+    </form>
+
+    <p>Ex 009</p>
+    <form action="">
+        <h1>Analisador de Idades</h1>
+        <div>
+            <input type="button" value="Começar a analisar" class="buttons" onclick="verifyAge()">
+        </div>
+        <div id="resageverify">
+            O resultado da análise aparecerá aqui
+        </div>
+    </form>
+    <script src="scriptfunctions.js"></script>
+</body>
+</html>
