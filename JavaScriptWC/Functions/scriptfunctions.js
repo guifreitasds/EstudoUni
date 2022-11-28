@@ -58,3 +58,20 @@ function pot(b, e) {
 
     res.innerHTML = `O resultado de ${b} elevado a ${e} = ${calc}`;
 }
+
+function createArray(size) {
+    var res = document.getElementById('resarray');
+    var array = [];
+    for(i=0;i<size;i++){
+        value = window.prompt(`Digite o valor a ser inserido na posição ${i}`);
+        array[i]=value;
+    }
+
+    var find = window.prompt('Qual número você gostaria de buscar?');
+    var pos = array.indexOf(find);
+    if(pos==-1){
+        res.innerHTML = `Valor ${find} não encontrado`;
+    } else{
+    res.innerHTML = `Valor ${find} encontrado na posição ${pos}`;
+    }
+}

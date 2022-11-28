@@ -142,40 +142,33 @@
         </div>
     </form>
 
-    <p>Ex 006</p>
+    <p class="titleex">Ex 007</p>
     <form action="">
-        <h1>Verificador de Salários</h1>
+        <h1>Pesquisador de elemento em array</h1>
         <div>
-            <label for="qtdfuncid">Digite a quantidade de funcionários</label>
-            <input type="number" id="qtdfuncid" required class="fields" placeholder="Qtd de funcionários">
+            <label for="tamid">Digite o tamanho do vetor</label>
+            <input type="number" id="tamid" required class="fields" placeholder="Tamanho Array" step="1">
         </div>
         <div>
-            <input type="button" value="Começar a verificar" class="buttons" onclick="calcSalary()">
+            <input type="button" value="Criar Array" class="buttons" onclick="createArray(document.getElementById('tamid').value)">
         </div>
-        <div id="resalary">
-            O resultado da verificação aparecerá aqui
+        <div id="resarray">
+            O resultado aparecerá aqui
         </div>
     </form>
 
-    <p>Ex 007</p>
+    <p class="titleex">Ex 008</p>
     <form action="">
-        <h1>Analisador de sala de aula</h1>
+        <h1>Teste</h1>
         <div>
-            <input type="button" value="Começar a analisar" class="buttons" onclick="verifyStudents()">
+            <label for="tamid">Digite o tamanho do vetor</label>
+            <input type="number" id="tamid" required class="fields" placeholder="Tamanho Array" step="1">
         </div>
-        <div id="resverifyst">
-            O resultado da análise aparecerá aqui
-        </div>
-    </form>
-
-    <p>Ex 009</p>
-    <form action="">
-        <h1>Analisador de Idades</h1>
         <div>
-            <input type="button" value="Começar a analisar" class="buttons" onclick="verifyAge()">
-        </div>
-        <div id="resageverify">
-            O resultado da análise aparecerá aqui
+            <input type="button" value="Criar Array" class="buttons" onclick="createArray(document.getElementById('tamid').value)">
+        <div>
+        <div id="resarray">
+            O resultado aparecerá aqui
         </div>
     </form>
     <script src="scriptfunctions.js"></script>
