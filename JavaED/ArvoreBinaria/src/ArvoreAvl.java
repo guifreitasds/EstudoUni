@@ -80,7 +80,7 @@ public class ArvoreAvl {
         
     }
     
-    public boolean Vazia() {
+    public boolean isEmpty() {
         if (raiz == null) {
             return true;
         } else {
@@ -223,13 +223,13 @@ public class ArvoreAvl {
     }
 
     public No duplaRotacaoEsquerdaDireita(No inicial) {
-	inicial.setEsquerda(rotacaoEsquerda(inicial.getEsquerda()));
-	return rotacaoDireita(inicial);
+        inicial.setEsquerda(rotacaoEsquerda(inicial.getEsquerda()));
+        return rotacaoDireita(inicial);
     }
 
     public No duplaRotacaoDireitaEsquerda(No inicial) {
-	inicial.setDireita(rotacaoDireita(inicial.getDireita()));
-	return rotacaoEsquerda(inicial);
+        inicial.setDireita(rotacaoDireita(inicial.getDireita()));
+        return rotacaoEsquerda(inicial);
     }
 
     public No sucessor(No q) {
@@ -298,12 +298,35 @@ public class ArvoreAvl {
         if (node.getDireita() != null) {
             imprimirArvore(node.getDireita());
         }
-        System.out.print(node.getValor() + "-");
+        System.out.print(node.getValor() + " // ");
         try {
             System.out.println("NóEsquerda: " + node.getEsquerda().getValor());
             System.out.println("NóDireita: " + node.getDireita().getValor());
         } catch (NullPointerException e) {
             e.getStackTrace();
+        }
+    }
+
+    public void Buscar(int valor) {
+        Buscar(this.raiz, valor);
+}
+
+    public void Buscar(No atual, int valor) {
+        
+        if (atual == null) {
+            System.out.println("Valor não encontrado");
+            return;
+        } else {
+
+            if (atual.getValor() > valor) {
+                Buscar(atual.getEsquerda(), valor);
+
+            } else if (atual.getValor() < valor) {
+                Buscar(atual.getDireita(), valor);
+
+            } else if (atual.getValor() == valor) {
+                System.out.println("Valor: " + valor + " encontrado!");
+            }             
         }
     }
 }
