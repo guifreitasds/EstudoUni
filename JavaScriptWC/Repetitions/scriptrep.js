@@ -214,6 +214,34 @@ function verifyStudents() {
     `
 }
 
+function storebonusnolimit() {
+    // Exercicio 008
+    var name = document.getElementById('nameid').value;
+    var total = document.getElementById('valuebuyid').value;
+    var res = document.getElementById('resbonus');
+
+    while(true){
+        var name = window.prompt('Digite o nome do cliente');
+        var total = window.prompt('Digite o valor de compra do cliente');
+        if(total>=10000){
+            var percentbonus = 15;
+            var bonus = total*(percentbonus/100);
+        } else{
+            percentbonus = 10;
+            bonus = total*(percentbonus/100);
+        }
+
+        // res.innerHTML = `Olá, ${name}. Você recebeu um bônus de ${percentbonus}% em cima do valor total das suas compras no ano, com o total de R$${bonus}`;
+
+
+        var esc = window.prompt('Você deseja cadastrar mais um cliente? [Digite 1 para sim e 2 para não]');
+
+        if(esc==2){
+            break;
+        }
+    }
+}
+
 
 function verifyAge() {
     // Exercicio 009
