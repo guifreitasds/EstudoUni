@@ -46,9 +46,13 @@ function calcpot() {
     var exp = document.getElementById('expid').value;
     var control = exp
 
-    while(control>1){
+    // while(control>1){
+    //     total += base*base;
+    //     control--;
+    // }
+
+    for(control=exp;control>1;control--){
         total += base*base;
-        control--;
     }
     res.innerHTML = `O resultado de ${base} elevado a ${exp} = ${total}`
 
@@ -116,6 +120,15 @@ function calcmulti() {
     }
 
     res.innerHTML = `O resultado do produto entre os valores digitados é: ${total}`
+
+    // Exercicio 005 com for
+    /* 
+        esc = window.prompt('Quantos valores você gostaria de multiplicar?');
+
+        for(esc;esc>0;esc--){
+            total*= window.prompt('Digite o valor a ser multiplicado');
+        }
+    */
 
 }
 
@@ -199,7 +212,7 @@ function verifyStudents() {
 
 
 function verifyAge() {
-
+    // Exercicio 009
     var lilchild = 0;
     var bigchild = 0;
     var teen = 0;

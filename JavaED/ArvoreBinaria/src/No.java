@@ -1,45 +1,59 @@
-package arvorebinaria;
+package arvoreavl;
 
 public class No {
 
-    private int valor;
-    private No noEsquerda;
-    private No noDireita;
+	private No esquerda;
+	private No direita;
+	private No pai;
+	private int valor;
+	private int balanceamento;
 
-    No(int valor) {
-        this.valor = valor;
-        this.noEsquerda = null;
-        this.noDireita = null;
-    }
+	public No(int valor) {
+		setEsquerda(setDireita(setPai(null)));
+		setBalanceamento(0);
+		setValor(valor);
+	}
 
-    public int getValor() {
-        return valor;
-    }
 
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
+	public int getValor() {
+            return valor;
+        }
 
-    public No getNoEsquerda() {
-        return noEsquerda;
-    }
+        public void setValor(int valor) {
+            this.valor = valor;
+        }
 
-    public void setNoEsquerda(No noEsquerda) {
-        this.noEsquerda = noEsquerda;
-    }
+	public int getBalanceamento() {
+		return balanceamento;
+	}
 
-    public No getNoDireita() {
-        return noDireita;
-    }
+	public void setBalanceamento(int balanceamento) {
+		this.balanceamento = balanceamento;
+	}
 
-    public void setNoDireita(No noDireita) {
-        this.noDireita = noDireita;
-    }
+	public No getPai() {
+		return pai;
+	}
 
-    public No(int valor, No noEsquerda, No noDireita) {
-        this.valor = valor;
-        this.noEsquerda = noEsquerda;
-        this.noDireita = noDireita;
-    }
+	public No setPai(No pai) {
+		this.pai = pai;
+		return pai;
+	}
 
+	public No getDireita() {
+		return direita;
+	}
+
+	public No setDireita(No direita) {
+		this.direita = direita;
+		return direita;
+	}
+
+	public No getEsquerda() {
+		return esquerda;
+	}
+
+	public void setEsquerda(No esquerda) {
+		this.esquerda = esquerda;
+	}
 }
