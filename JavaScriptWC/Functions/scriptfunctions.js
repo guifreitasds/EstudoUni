@@ -1,4 +1,5 @@
 function division(x,y) {
+    // Exercicio 001
     var res = document.getElementById('resdivision');
     if(x==0){
         x = Number(window.prompt('ERRO, divisão por zero não autorizada, digite um novo valor!'));
@@ -10,6 +11,7 @@ function division(x,y) {
 }
 
 function triangle(x,y,z) {
+    // Exercicio 002
     var res = document.getElementById('restriangle')
     if(x==y && y==z){
         res.innerHTML = `Esses lados representam um triângulo equilátero`
@@ -21,6 +23,7 @@ function triangle(x,y,z) {
 }
 
 function storediscount(buyvalue) {
+    // Exercicio 003
     var res = document.getElementById('restored')
     if(buyvalue>500){
         res.innerHTML = `Você recebeu um desconto de ${buyvalue*0.1}(10%) em cima do valor da sua compra de R$${buyvalue}, valor final: R$${buyvalue-buyvalue*0.1}` 
@@ -32,6 +35,7 @@ function storediscount(buyvalue) {
 }
 
 function storetypepay(buyvalue, paytype) {
+    // Exercicio 004
     var res = document.getElementById('restorediscount');
     console.log(buyvalue)
     if(paytype==1){
@@ -45,6 +49,7 @@ function storetypepay(buyvalue, paytype) {
 }
 
 function colandlines(x, y) {
+    // Exercicio 005
     var res = document.getElementById('rescandl');
     while(y!=0){
         res.innerHTML += `<p>${'*'.repeat(x)}</p>`;
@@ -53,6 +58,7 @@ function colandlines(x, y) {
 }
 
 function pot(b, e) {
+    // Exercicio 006
     var res = document.getElementById('resbasexp');
     var calc = b**e;
 
@@ -60,6 +66,7 @@ function pot(b, e) {
 }
 
 function createArray(size) {
+    // Exercicio 007
     var res = document.getElementById('resarray');
     var array = [];
     for(i=0;i<size;i++){
@@ -77,6 +84,7 @@ function createArray(size) {
 }
 
 function calcDistance(vf, time, accel) {
+    // Exercicio 008
     var res = document.getElementById('resdistance');
     vi = vf-(accel/time);
     var distance = vi*time+accel*time**2;
