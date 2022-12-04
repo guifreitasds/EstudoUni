@@ -1,5 +1,3 @@
-package arvoreavl;
-
 public class No {
 
 	private No esquerda;

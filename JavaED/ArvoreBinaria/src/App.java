@@ -1,8 +1,6 @@
-package arvoreavl;
-
 import java.util.Scanner;
 
-public class main {
+public class App {
     
     public static void main(String[] args) throws Exception {
         Scanner esc = new Scanner(System.in);
@@ -18,12 +16,12 @@ public class main {
             System.out.println("4 - Buscar Nó ");
             System.out.println("5 - Sair ");
             System.out.println("");
-            System.out.println("------------------------");
+            System.out.println("-------------------------------");
             System.out.print("Informe a opção desejada: ");
             opc = esc.nextInt();
             switch (opc) {
                 case 1:
-                    //INSERIR
+                    // inserção de valor
                     System.out.println("-=-=-= INSERIR -=-=-=");
                     System.out.println("");
                     System.out.print("Informe o valor que deseja inserir: ");
@@ -33,7 +31,7 @@ public class main {
                     System.out.println("-----------------");
                     break;
                 case 2:
-                    //REMOVER
+                    // exclusão de valor
                     System.out.println("-=-=-= EXCLUIR -=-=-=");
                     System.out.println("");
                     if (arvore.isEmpty() == true) {
@@ -49,7 +47,7 @@ public class main {
                     System.out.println("-------------------");
                     break;
                 case 3:
-                    //IMPRIMIR
+                    // impressão da àrvore (ORDEM: NÓ ESQUERDO, NÓ DIREITO E RAIZ. Subàrvores e Àrvore)
                     System.out.println("-=-=-= IMPRIMIR -=-=-=");
                     System.out.println("");
                     arvore.imprimirArvore();
@@ -57,16 +55,17 @@ public class main {
                     System.out.println("--------------------");
                     break;
                 case 4:
+                    // busca de valor 
                     System.out.print("Informe o valor que deseja buscar: ");
                     valor = esc.nextInt();
                     arvore.Buscar(valor);
                     System.out.println("");
                     System.out.println("-------------------");
                 case 5:
-                    System.out.println("Sair");
+                    System.out.println("Saindo...");
                     break;
                 default:
-                    System.out.println("Sua opção é inválida!");
+                    System.out.println("Opção inválida!");
                     break;
             }
             System.out.println("");

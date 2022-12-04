@@ -1,7 +1,3 @@
-package arvoreavl;
-
-import java.util.ArrayList;
-
 public class ArvoreAvl {
 
     protected No raiz;
