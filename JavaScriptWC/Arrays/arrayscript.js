@@ -22,6 +22,7 @@ function createArray(tam) {
 }
 
 function buyStore() {
+    // Ex 004
     var matriz = [];
     do {
         var opc = Number(window.prompt(`
@@ -91,6 +92,7 @@ function buyStore() {
 }
 
 function Users() {
+    // Ex 005
     var matriz = [];
     do {
         var opc = Number(window.prompt(`
@@ -156,6 +158,7 @@ function Users() {
 }
 
 function buyStoreAward() {
+    // Ex 006
     var matriz = [];
     do {
         var opc = Number(window.prompt(`
