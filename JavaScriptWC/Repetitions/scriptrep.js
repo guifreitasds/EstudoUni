@@ -231,7 +231,7 @@ function storebonusnolimit() {
             bonus = total*(percentbonus/100);
         }
 
-        // res.innerHTML = `Olá, ${name}. Você recebeu um bônus de ${percentbonus}% em cima do valor total das suas compras no ano, com o total de R$${bonus}`;
+        window.alert(`Olá, ${name}. Você recebeu um bônus de ${percentbonus}% em cima do valor total das suas compras no ano, com o total de R$${bonus}`);
 
 
         var esc = window.prompt('Você deseja cadastrar mais um cliente? [Digite 1 para sim e 2 para não]');
