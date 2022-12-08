@@ -119,7 +119,7 @@ function calcmulti() {
         if(esc==1){
             break;
         }
-        total*= window.prompt('Digite o valor a ser multiplicado');
+        total *= Number(window.prompt('Digite o valor a ser multiplicado'));
 
     }
 
