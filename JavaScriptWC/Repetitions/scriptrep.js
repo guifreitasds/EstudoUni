@@ -72,7 +72,7 @@ function researchCinema() {
     // Fiz com apenas 5 pessoas para facilitar o teste 
     while(qtd<5){ 
         qtd++;
-        idade += Number(window.prompt('Qual a sua idade?'));
+        idade = Number(window.prompt('Qual a sua idade?'));
         var opinion = window.prompt('Avaliação do filme [1-Regular, 2-Bom, 3-Ótimo]');
         if(opinion==1){
             reg++;
@@ -86,7 +86,7 @@ function researchCinema() {
 
     // for(i=qtd;i<5;i++){
     //     qtd++;
-    //     idade += Number(window.prompt('Qual a sua idade?'));
+    //     idade = Number(window.prompt('Qual a sua idade?'));
     //     var opinion = window.prompt('Avaliação do filme [1-Regular, 2-Bom, 3-Ótimo]');
     //     if(opinion==1){
     //         reg++;
