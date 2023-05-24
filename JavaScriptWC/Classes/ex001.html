@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionários da empresa</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+        }
+        .emp{
+            color: #f0f0f0;
+            background-color: #005daf;
+            padding: 30;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px #33333352;
+        }
+        .pro{
+            margin-top: 30px;
+            color: #f0f0f0;
+            background-color: #5610a7;
+            padding: 30;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px #33333352;
+        }
+
+        .ani{
+            margin-top: 30px;
+            color: #f0f0f0;
+            background-color: #714a00;
+            padding: 30;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px #33333352;
+        }
+
+        .acc{
+            margin-top: 30px;
+            color: #f0f0f0;
+            background-color: #505050;
+            padding: 30;
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px #33333352;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicios Classes</h1>
+    <div class="emp">
+        <h2>Empregados</h2>
+        <p class="employee"></p>
+    </div>
+
+    <div class="pro">
+        <h2>Produtos</h2>
+        <p class="product"></p>
+    </div>
+
+    
+    <div class="ani">
+        <h2>Animais</h2>
+        <p class="animal"></p>
+    </div>
+
+    <div class="acc">
+        <h2>Banco</h2>
+        <p class="account"></p>
+    </div>
+</body>
+
+<script>
+
+    // Classe Empregado - 1° quesito
+    class Employee{
+        name;
+        salary;
+
+        constructor(name, salary){
+            this.name = name;
+            this.salary = salary;
+        }
+
+        riseSalary(rise){
+            rise=rise/100
+            this.salary = this.salary+this.salary*rise
+        }
+    }
+
+    e1 = new Employee('Carlos', 1200);
+    e1.riseSalary(10);
+    res = document.querySelector('.employee');
+    res.innerHTML = `Nome do funcionário: ${e1.name}
+    <br>
+    Salário do funcionário com aumento: ${e1.salary}
+    `
+
+
+    // Classe Produto - 2° quesito
+
+    class Product{
+        name;
+        description;
+        price;
+
+        constructor(name, desc, price){
+            this.name = name
+            this.description = desc
+            this.price = price
+        }
+
+        risePrice(val){
+            this.price+=val
+        }
+    }
+    p1 = new Product('Vinho', 'Vinho seco', 40)
+    p1.risePrice(10)
+    respro = document.querySelector('.product')
+    respro.innerHTML=`Produto: ${p1.name}<br>
+    ${p1.description}<br>
+    R$${p1.price}`
+
+    // Classe animal e cachorro - 3° quesito
+
+    class Animal{
+        name
+        weight
+        color
+        
+        constructor(name, weight, color){
+            this.name = name
+            this.weight = weight
+            this.color = color
+        }
+    }
+
+    class Dog extends Animal{
+        som
+
+        constructor(name, weight, color, som){
+            super(name, weight, color)  
+            this.som=som
+        }
+        fazerBarulho(){
+            document.querySelector('.animal').innerHTML = `O ${this.name} que é um Cachorro faz ${this.som}`
+        }
+    }
+
+    a1 = new Dog('Totó', 7, 'Marrom', 'auau')
+    a1.fazerBarulho()
+
+
+    // Classe conta - 4° quesito
+
+    class Account{
+        owner
+        balance
+        limit
+
+        constructor(owner, balance,limit){
+            this.owner=owner
+            this.balance=balance
+            this.limit=limit
+        }
+
+        deposit(val){
+            this.balance+=val
+        }
+    }
+
+    c1 = new Account('Guilherme', 200, 1000)
+    c1.deposit(100)
+    console.log(c1.balance)
+    resacc = document.querySelector('.account').innerHTML=`Olá, ${c1.owner} o seu limite atual é de R$${c1.limit}, seu saldo está no console!`
+</script>
+</html>
